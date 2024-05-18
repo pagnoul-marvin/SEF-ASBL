@@ -13,7 +13,9 @@
 
 
 !Adobe XD
+!Adobe XD/*
 !Adobe XD/*.xd
+!Adobe XD/images moodboard/*
 
 !.gitignore
 !composer.json*
@@ -24,3 +26,14 @@ wp-content/*
 wp-content/themes/*
 !wp-content/themes/asbl
 !wp-content/themes/asbl/*
+wp-content/themes/asbl/.env.local.ini
+!wp-content/themes/asbl/helpers/*
+!wp-content/themes/asbl/core/*
+!wp-content/themes/asbl/resources/*
+!wp-content/themes/asbl/resources/components/*
+!wp-content/themes/asbl/resources/components/navigations/*
+!wp-content/themes/asbl/resources/css/*
+!wp-content/themes/asbl/resources/sass/*
+!wp-content/themes/asbl/resources/js/*
+
+/vendor/

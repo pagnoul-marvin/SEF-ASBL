@@ -1,0 +1,20 @@
+{
+    "name": "marvinpagnoul/site_sef",
+    "description": "Website for SEF NPA",
+    "type": "project",
+    "require": {
+        "php": "^8.1",
+        "ext-pdo": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Core\\": "wp-content/themes/asbl/core/"
+        }
+    },
+    "authors": [
+        {
+            "name": "pagnoul-marvin",
+            "email": "marvin.pagnoul@student.hepl.be"
+        }
+    ]
+}
