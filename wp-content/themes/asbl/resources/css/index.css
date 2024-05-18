@@ -1,3 +1,106 @@
+.hidden {
+  overflow: hidden !important;
+  font-size: 0 !important;
+  text-indent: -100000px !important;
+  position: absolute;
+}
 
+.link_hover {
+  color: #fff;
+  text-decoration: underline transparent;
+  transition: text-decoration 0.5s ease-in-out;
+}
+.link_hover:hover {
+  text-decoration: underline #fff;
+}
+
+.flex_container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+body {
+  color: #fff;
+}
+body header {
+  position: fixed;
+  top: 0;
+  background-color: #3E38AD;
+  padding: 1.5625em 1em;
+  width: calc(100% - 2em);
+  z-index: 1;
+}
+body header nav.flex_container {
+  flex-direction: row;
+  align-items: center;
+}
+body header nav.flex_container label[for=burger_menu] {
+  width: 2em;
+  height: 1.5em;
+  position: relative;
+  display: inline-block;
+  z-index: 2;
+}
+body header nav.flex_container label[for=burger_menu] span.line {
+  width: 100%;
+  display: block;
+  height: 0.2em;
+  position: absolute;
+  top: calc(50% - 0.1em);
+  background-color: #fff;
+  border-radius: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+body header nav.flex_container label[for=burger_menu] span.line:before, body header nav.flex_container label[for=burger_menu] span.line:after {
+  content: "";
+  height: 0.2em;
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+  border-radius: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+body header nav.flex_container label[for=burger_menu] span.line:before {
+  transform: translateY(-0.6em);
+}
+body header nav.flex_container label[for=burger_menu] span.line:after {
+  transform: translateY(0.6em);
+}
+body header nav.flex_container ul.flex_container {
+  position: absolute;
+  top: -1000px;
+  background-color: #3E38AD;
+  transition: 0.5s ease-in-out;
+  visibility: hidden;
+  width: calc(100% - 2em);
+  padding: 1.5625em 1em;
+  overflow: scroll;
+  height: 100vh;
+  gap: 3.125em;
+  transform: translateX(-1em);
+}
+body header nav.flex_container ul.flex_container li {
+  border-bottom: 1px solid #fff;
+  padding-bottom: 2.1875em;
+}
+body header nav.flex_container input[type=checkbox] {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+body header nav.flex_container input[type=checkbox]:checked ~ ul {
+  top: 0;
+  visibility: visible;
+}
+body header nav.flex_container input[type=checkbox]:checked ~ label[for=burger_menu] span.line {
+  background-color: transparent;
+}
+body header nav.flex_container input[type=checkbox]:checked ~ label[for=burger_menu] span.line:before {
+  transform: rotate(-45deg);
+}
+body header nav.flex_container input[type=checkbox]:checked ~ label[for=burger_menu] span.line:after {
+  transform: rotate(45deg);
+}
 
 /*# sourceMappingURL=index.css.map */

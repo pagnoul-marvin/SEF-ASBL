@@ -14,9 +14,10 @@
     <title>ASBL SEF &ndash; <?= get_the_title(); ?></title>
 </head>
 <body>
-    <h1><?= get_bloginfo('name') ?></h1>
+<h1 class="hidden"><?= get_bloginfo('name') ?></h1>
     <header>
         <?php component('navigations.main_navigation', [
+            'burger_menu' => true,
             'nav_title' => 'Navigation principale',
             'logo' => 'accueil',
             'location' => 'main'

@@ -1,3 +1,133 @@
 //sass --watch index.scss:../css/index.css
 @import "variables";
 
+.hidden {
+  overflow: hidden !important;
+  font-size: 0 !important;
+  text-indent: -100000px !important;
+  position: absolute;
+}
+
+.link_hover {
+  color: $white_color;
+  text-decoration: underline transparent;
+  transition: text-decoration .5s ease-in-out;
+
+  &:hover {
+    text-decoration: underline $white_color;
+  }
+}
+
+.flex_container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+body {
+  color: $white_color;
+
+  header {
+    position: fixed;
+    top: 0;
+    background-color: $light_blue_color;
+    padding: 1.5625em $base_padding;
+    width: calc(100% - 2em);
+    z-index: 1;
+
+    nav.flex_container {
+      flex-direction: row;
+      align-items: center;
+
+      label[for="burger_menu"] {
+        width: 2em;
+        height: 1.5em;
+        position: relative;
+        display: inline-block;
+        z-index: 2;
+
+        span.line {
+          width: 100%;
+          display: block;
+          height: 0.2em;
+          position: absolute;
+          top: calc(50% - 0.1em);
+          background-color: $white_color;
+          border-radius: 0.3em;
+          transition: all .3s ease-in-out;
+
+          &:before, &:after {
+            content: "";
+            height: 0.2em;
+            width: 100%;
+            background-color: #fff;
+            position: absolute;
+            border-radius: 0.3em;
+            transition: all .3s ease-in-out;
+          }
+
+          &:before {
+            transform: translateY(-0.6em);
+          }
+
+          &:after {
+            transform: translateY(0.6em);
+          }
+        }
+      }
+
+      ul.flex_container {
+        position: absolute;
+        top: -1000px;
+        background-color: $light_blue_color;
+        transition: .5s ease-in-out;
+        visibility: hidden;
+        width: calc(100% - 2em);
+        padding: 1.5625em $base_padding;
+        overflow: scroll;
+        height: 100vh;
+        gap: 3.125em;
+        transform: translateX(-1em);
+
+        li {
+          border-bottom: 1px solid $white_color;
+          padding-bottom: 2.1875em;
+        }
+      }
+
+      input[type="checkbox"] {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+
+        &:checked {
+          & ~ ul {
+            top: 0;
+            visibility: visible;
+          }
+
+          & ~ label[for="burger_menu"] {
+            span.line {
+              background-color: transparent;
+
+              &:before {
+                transform: rotate(-45deg);
+              }
+
+              &:after {
+                transform: rotate(45deg);
+              }
+            }
+          }
+        }
+      }
+
+      ul {
+      }
+    }
+  }
+
+  main {
+
+  }
+}
