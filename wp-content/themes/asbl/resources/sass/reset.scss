@@ -122,3 +122,46 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+
+@font-face {
+  font-family: 'Helvetica-Roman';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../../resources/fonts/helvetica_neue/HelveticaNeueCyr-Roman.ttf') format('TrueType');
+}
+
+@font-face {
+  font-family: 'Helvetica-Bold';
+  font-style: normal;
+  font-weight: bold;
+  src: url('../../resources/fonts/helvetica_neue/HelveticaNeueCyr-Bold.ttf') format('TrueType');
+}
+
+@font-face {
+  font-family: 'Arial-Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../../resources/fonts/arial/ARIAL.TTF') format('TrueType');
+}
+
+@font-face {
+  font-family: 'Arial-Bold';
+  font-style: normal;
+  font-weight: bold;
+  src: url('../../resources/fonts/arial/ARIALBD.TTF') format('TrueType');
+}
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../../resources/fonts/roboto/Roboto-Regular.ttf') format('TrueType');
+}
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  font-style: normal;
+  font-weight: bold;
+  src: url('../../resources/fonts/roboto/Roboto-Bold.ttf') format('TrueType');
+}

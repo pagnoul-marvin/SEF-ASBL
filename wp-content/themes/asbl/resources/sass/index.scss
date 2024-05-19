@@ -12,7 +12,7 @@
   color: $white_color;
   text-decoration: underline transparent;
   transition: text-decoration .5s ease-in-out;
-
+  font-family: 'Helvetica-Bold', 'Arial-Bold', 'Roboto-Bold', sans-serif;
   &:hover {
     text-decoration: underline $white_color;
   }
@@ -26,22 +26,35 @@
 
 body {
   color: $white_color;
+  font-family: 'Helvetica-Roman', 'Arial-Regular', 'Roboto-Regular', sans-serif;
+  font-size: .875em;
 
   header {
     position: fixed;
     top: 0;
     background-color: $light_blue_color;
-    padding: 1.5625em $base_padding;
+    padding: $medium_padding $base_padding;
     width: calc(100% - 2em);
     z-index: 1;
 
-    nav.flex_container {
+    .main_nav {
       flex-direction: row;
       align-items: center;
 
+      &_logo {
+        background-image: url("../images/logo.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        text-indent: -10000px;
+        overflow: hidden;
+        width: 40px;
+        height: 40px;
+      }
+
       label[for="burger_menu"] {
-        width: 2em;
-        height: 1.5em;
+        cursor: pointer;
+        width: 3em;
+        height: 2.5em;
         position: relative;
         display: inline-block;
         z-index: 2;
@@ -49,7 +62,7 @@ body {
         span.line {
           width: 100%;
           display: block;
-          height: 0.2em;
+          height: 0.4em;
           position: absolute;
           top: calc(50% - 0.1em);
           background-color: $white_color;
@@ -58,7 +71,7 @@ body {
 
           &:before, &:after {
             content: "";
-            height: 0.2em;
+            height: 0.4em;
             width: 100%;
             background-color: #fff;
             position: absolute;
@@ -67,11 +80,11 @@ body {
           }
 
           &:before {
-            transform: translateY(-0.6em);
+            transform: translateY(-1.1em);
           }
 
           &:after {
-            transform: translateY(0.6em);
+            transform: translateY(1.1em);
           }
         }
       }
@@ -83,15 +96,19 @@ body {
         transition: .5s ease-in-out;
         visibility: hidden;
         width: calc(100% - 2em);
-        padding: 1.5625em $base_padding;
+        padding: 7.5em $base_padding;
         overflow: scroll;
-        height: 100vh;
+        max-height: calc(100vh - 15em);
         gap: 3.125em;
         transform: translateX(-1em);
+        border-radius: 3.75em 0;
 
         li {
           border-bottom: 1px solid $white_color;
           padding-bottom: 2.1875em;
+          a {
+            font-size: 1.375em;
+          }
         }
       }
 
@@ -120,9 +137,6 @@ body {
             }
           }
         }
-      }
-
-      ul {
       }
     }
   }
