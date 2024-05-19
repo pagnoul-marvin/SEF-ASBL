@@ -15,7 +15,7 @@ h1, h2, .link_hover {
 h1 {
   font-size: $main_title_font_size;
   background-color: $dark_blue_color;
-  border-radius: 3.75em 0;
+  border-radius: $section_border_radius 0;
   padding: 1.5625em;
   margin-top: calc(3.125em + 5.234375em);
 }
@@ -124,7 +124,7 @@ body {
 
         ul.flex_container {
           background-color: $light_blue_color;
-          border-radius: 7.5em 0;
+          border-radius: $burger_menu_border_radius 0;
           padding: 7.5em $base_padding;
           gap: 3.125em;
 
