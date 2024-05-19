@@ -8,11 +8,31 @@
   position: absolute;
 }
 
+h1, h2, .link_hover {
+  font-family: 'Helvetica-Bold', 'Arial-Bold', 'Roboto-Bold', sans-serif;
+}
+
+h1 {
+  font-size: $main_title_font_size;
+  background-color: $dark_blue_color;
+  border-radius: 3.75em 0;
+  padding: 1.5625em;
+  margin-top: calc(3.125em + 5.234375em);
+}
+
+h2 {
+  font-size: $second_title_font_size;
+}
+
+.spacing {
+  margin-top: 3.125em;
+}
+
 .link_hover {
   color: $white_color;
   text-decoration: underline transparent;
   transition: text-decoration .5s ease-in-out;
-  font-family: 'Helvetica-Bold', 'Arial-Bold', 'Roboto-Bold', sans-serif;
+
   &:hover {
     text-decoration: underline $white_color;
   }
@@ -27,7 +47,7 @@
 body {
   color: $white_color;
   font-family: 'Helvetica-Roman', 'Arial-Regular', 'Roboto-Regular', sans-serif;
-  font-size: .875em;
+  font-size: $text_font_size;
 
   header {
     position: fixed;
@@ -64,10 +84,10 @@ body {
           display: block;
           height: 0.4em;
           position: absolute;
-          top: calc(50% - 0.1em);
+          top: calc(50% - 0.2em);
           background-color: $white_color;
           border-radius: 0.3em;
-          transition: all .3s ease-in-out;
+          transition: all .5s ease-in-out;
 
           &:before, &:after {
             content: "";
@@ -76,38 +96,45 @@ body {
             background-color: #fff;
             position: absolute;
             border-radius: 0.3em;
-            transition: all .3s ease-in-out;
+            transition: all .5s ease-in-out;
           }
 
           &:before {
-            transform: translateY(-1.1em);
+            transform: translateY(-1em);
           }
 
           &:after {
-            transform: translateY(1.1em);
+            transform: translateY(1em);
           }
         }
       }
 
-      ul.flex_container {
+
+      div {
         position: absolute;
         top: -1000px;
-        background-color: $light_blue_color;
         transition: .5s ease-in-out;
         visibility: hidden;
-        width: calc(100% - 2em);
-        padding: 7.5em $base_padding;
+        background-color: $white_color;
         overflow: scroll;
-        max-height: calc(100vh - 15em);
-        gap: 3.125em;
+        height: 100vh;
         transform: translateX(-1em);
-        border-radius: 3.75em 0;
+        width: 100vw;
+        display: inline-block;
 
-        li {
-          border-bottom: 1px solid $white_color;
-          padding-bottom: 2.1875em;
-          a {
-            font-size: 1.375em;
+        ul.flex_container {
+          background-color: $light_blue_color;
+          border-radius: 7.5em 0;
+          padding: 7.5em $base_padding;
+          gap: 3.125em;
+
+          li {
+            border-bottom: 1px solid $white_color;
+            padding-bottom: 2.1875em;
+
+            a {
+              font-size: $main_title_font_size;
+            }
           }
         }
       }
@@ -118,7 +145,7 @@ body {
         height: 0;
 
         &:checked {
-          & ~ ul {
+          & ~ div {
             top: 0;
             visibility: visible;
           }
@@ -143,5 +170,66 @@ body {
 
   main {
 
+  }
+
+  footer {
+    background-color: $light_blue_color;
+    padding-top: $medium_padding;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1.875em;
+
+    nav {
+
+      &.socials_nav, &.footer_nav, &.contact_nav, &.partners_nav {
+        padding: 0 $base_padding;
+        gap: 1em;
+
+        ul.flex_container {
+          gap: 0.625em;
+
+          li {
+            a {
+              font-family: 'Helvetica-Roman', 'Arial-Regular', 'Roboto-Regular', sans-serif;
+              font-size: $text_font_size;
+            }
+          }
+        }
+      }
+
+      &.contact_nav {
+        li {
+          p {
+            font-size: $text_font_size;
+          }
+        }
+      }
+
+      &.socials_nav {
+        li {
+          a {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url("../images/facebook_icon.svg");
+            width: 40px;
+            height: 40px;
+            text-indent: -10000px;
+            display: inline-block;
+          }
+        }
+      }
+    }
+
+    section#legal_notices {
+      background-color: $dark_blue_color;
+      padding: $medium_padding $base_padding;
+      gap: 0.625em;
+
+      a {
+        font-family: 'Helvetica-Roman', 'Arial-Regular', 'Roboto-Regular', sans-serif;
+      }
+    }
   }
 }

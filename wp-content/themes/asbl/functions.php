@@ -10,6 +10,8 @@ add_filter('use_block_editor_for_post', '__return_false');
 register_nav_menu('main', 'Navigation principale, en-tête du site');
 register_nav_menu('footer', 'Navigation de pied de page');
 register_nav_menu('socials', 'Navigation de réseaux sociaux');
+register_nav_menu('contact', 'Navigation de contacts');
+register_nav_menu('partners', 'Navigation des partenaires');
 
 
 function dw_asset(string $file): string

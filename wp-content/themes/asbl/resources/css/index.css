@@ -5,11 +5,30 @@
   position: absolute;
 }
 
+h1, h2, .link_hover {
+  font-family: "Helvetica-Bold", "Arial-Bold", "Roboto-Bold", sans-serif;
+}
+
+h1 {
+  font-size: 1.375em;
+  background-color: #27236F;
+  border-radius: 3.75em 0;
+  padding: 1.5625em;
+  margin-top: 8.359375em;
+}
+
+h2 {
+  font-size: 1.125em;
+}
+
+.spacing {
+  margin-top: 3.125em;
+}
+
 .link_hover {
   color: #fff;
   text-decoration: underline transparent;
   transition: text-decoration 0.5s ease-in-out;
-  font-family: "Helvetica-Bold", "Arial-Bold", "Roboto-Bold", sans-serif;
 }
 .link_hover:hover {
   text-decoration: underline #fff;
@@ -60,10 +79,10 @@ body header .main_nav label[for=burger_menu] span.line {
   display: block;
   height: 0.4em;
   position: absolute;
-  top: calc(50% - 0.1em);
+  top: calc(50% - 0.2em);
   background-color: #fff;
   border-radius: 0.3em;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 body header .main_nav label[for=burger_menu] span.line:before, body header .main_nav label[for=burger_menu] span.line:after {
   content: "";
@@ -72,33 +91,37 @@ body header .main_nav label[for=burger_menu] span.line:before, body header .main
   background-color: #fff;
   position: absolute;
   border-radius: 0.3em;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 body header .main_nav label[for=burger_menu] span.line:before {
-  transform: translateY(-1.1em);
+  transform: translateY(-1em);
 }
 body header .main_nav label[for=burger_menu] span.line:after {
-  transform: translateY(1.1em);
+  transform: translateY(1em);
 }
-body header .main_nav ul.flex_container {
+body header .main_nav div {
   position: absolute;
   top: -1000px;
-  background-color: #3E38AD;
   transition: 0.5s ease-in-out;
   visibility: hidden;
-  width: calc(100% - 2em);
-  padding: 7.5em 1em;
+  background-color: #fff;
   overflow: scroll;
-  max-height: calc(100vh - 15em);
-  gap: 3.125em;
+  height: 100vh;
   transform: translateX(-1em);
-  border-radius: 3.75em 0;
+  width: 100vw;
+  display: inline-block;
 }
-body header .main_nav ul.flex_container li {
+body header .main_nav div ul.flex_container {
+  background-color: #3E38AD;
+  border-radius: 7.5em 0;
+  padding: 7.5em 1em;
+  gap: 3.125em;
+}
+body header .main_nav div ul.flex_container li {
   border-bottom: 1px solid #fff;
   padding-bottom: 2.1875em;
 }
-body header .main_nav ul.flex_container li a {
+body header .main_nav div ul.flex_container li a {
   font-size: 1.375em;
 }
 body header .main_nav input[type=checkbox] {
@@ -106,7 +129,7 @@ body header .main_nav input[type=checkbox] {
   width: 0;
   height: 0;
 }
-body header .main_nav input[type=checkbox]:checked ~ ul {
+body header .main_nav input[type=checkbox]:checked ~ div {
   top: 0;
   visibility: visible;
 }
@@ -118,6 +141,45 @@ body header .main_nav input[type=checkbox]:checked ~ label[for=burger_menu] span
 }
 body header .main_nav input[type=checkbox]:checked ~ label[for=burger_menu] span.line:after {
   transform: rotate(45deg);
+}
+body footer {
+  background-color: #3E38AD;
+  padding-top: 1.5625em;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 1.875em;
+}
+body footer nav.socials_nav, body footer nav.footer_nav, body footer nav.contact_nav, body footer nav.partners_nav {
+  padding: 0 1em;
+  gap: 1em;
+}
+body footer nav.socials_nav ul.flex_container, body footer nav.footer_nav ul.flex_container, body footer nav.contact_nav ul.flex_container, body footer nav.partners_nav ul.flex_container {
+  gap: 0.625em;
+}
+body footer nav.socials_nav ul.flex_container li a, body footer nav.footer_nav ul.flex_container li a, body footer nav.contact_nav ul.flex_container li a, body footer nav.partners_nav ul.flex_container li a {
+  font-family: "Helvetica-Roman", "Arial-Regular", "Roboto-Regular", sans-serif;
+  font-size: 0.875em;
+}
+body footer nav.contact_nav li p {
+  font-size: 0.875em;
+}
+body footer nav.socials_nav li a {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../images/facebook_icon.svg");
+  width: 40px;
+  height: 40px;
+  text-indent: -10000px;
+  display: inline-block;
+}
+body footer section#legal_notices {
+  background-color: #27236F;
+  padding: 1.5625em 1em;
+  gap: 0.625em;
+}
+body footer section#legal_notices a {
+  font-family: "Helvetica-Roman", "Arial-Regular", "Roboto-Regular", sans-serif;
 }
 
 /*# sourceMappingURL=index.css.map */
