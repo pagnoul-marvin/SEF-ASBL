@@ -3,7 +3,6 @@
 /** @var string $nav_title_class */
 /** @var string $logo */
 /** @var string $location */
-
 ?>
 
 <nav class="<?= $location ?>_nav flex_container">

@@ -33,6 +33,7 @@ wp-content/themes/asbl/.env.local.ini
 !wp-content/themes/asbl/resources/components/*
 !wp-content/themes/asbl/resources/components/navigations/*
 !wp-content/themes/asbl/resources/components/burger_menu/*
+!wp-content/themes/asbl/resources/components/home/*
 !wp-content/themes/asbl/resources/css/*
 !wp-content/themes/asbl/resources/sass/*
 !wp-content/themes/asbl/resources/js/*

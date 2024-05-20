@@ -1,26 +1,67 @@
-<?php
-get_header();
-
-?>
+<?php get_header(); ?>
 
 <main>
 
     <section class="odd spacing">
 
-        <h2 class="section_second_title"><?= get_field('who_are_we_title') ?></h2>
+        <?php component('home.section', [
+            'field_name' => 'who_are_we',
+            'page' => 'Qui sommes-nous ?'
+        ]); ?>
 
-        <img class="filter" src="<?= get_field('who_are_we_image')['url'] ?>"
-             alt="<?= get_field('who_are_we_image')['alt'] ?>">
+    </section>
 
-        <div class="center">
+    <section class="even spacing">
 
-            <p class="text"><?= get_field('who_are_we_text') ?></p>
+        <?php component('home.section', [
+            'field_name' => 'projects',
+            'page' => 'Nos derniers projets'
+        ]); ?>
 
-        </div>
+    </section>
 
-            <a class="section_link" title="Aller vers la page Qui sommes-nous ?" href="<?= esc_url(get_field('who_are_we_link')['url']); ?>"><?= esc_html(get_field('who_are_we_link')['title']); ?></a>
+    <section class="odd spacing">
 
-            <p class="section_link_hover"><?= esc_html(get_field('who_are_we_link')['title']); ?></p>
+        <?php component('home.section', [
+            'field_name' => 'shop',
+            'page' => 'Nos magasins'
+        ]); ?>
+
+    </section>
+
+    <section class="even spacing">
+
+        <?php component('home.section', [
+            'field_name' => 'contact',
+            'page' => 'Nous contacter'
+        ]); ?>
+
+    </section>
+
+    <section class="odd spacing">
+
+        <?php component('home.section', [
+            'field_name' => 'gallery',
+            'page' => 'Galerie photos'
+        ]); ?>
+
+    </section>
+
+    <section class="even spacing">
+
+        <?php component('home.section', [
+            'field_name' => 'support',
+            'page' => 'Nous soutenir'
+        ]); ?>
+
+    </section>
+
+    <section class="odd spacing">
+
+        <?php component('home.section', [
+            'field_name' => 'faq',
+            'page' => 'F.A.Q.'
+        ]); ?>
 
     </section>
 

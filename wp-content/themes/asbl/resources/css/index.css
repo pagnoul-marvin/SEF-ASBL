@@ -29,11 +29,11 @@
 
 .section_link_hover {
   background-repeat: no-repeat;
-  background-position: calc(50% + 55px);
+  background-position: 75%;
   background-image: url("../images/link_arrow.svg");
   display: inline-block;
   width: 100%;
-  text-indent: calc(50% - 55px - 67.5px);
+  text-indent: 25%;
 }
 
 .flex_container {
