@@ -4,7 +4,7 @@
 
     <section class="odd spacing">
 
-        <?php component('home.section', [
+        <?php component('linked_section.section', [
             'field_name' => 'who_are_we',
             'page' => 'Qui sommes-nous ?'
         ]); ?>
@@ -13,7 +13,7 @@
 
     <section class="even spacing">
 
-        <?php component('home.section', [
+        <?php component('linked_section.section', [
             'field_name' => 'projects',
             'page' => 'Nos derniers projets'
         ]); ?>
@@ -22,7 +22,7 @@
 
     <section class="odd spacing">
 
-        <?php component('home.section', [
+        <?php component('linked_section.section', [
             'field_name' => 'shop',
             'page' => 'Nos magasins'
         ]); ?>
@@ -31,7 +31,7 @@
 
     <section class="even spacing">
 
-        <?php component('home.section', [
+        <?php component('linked_section.section', [
             'field_name' => 'contact',
             'page' => 'Nous contacter'
         ]); ?>
@@ -40,7 +40,7 @@
 
     <section class="odd spacing">
 
-        <?php component('home.section', [
+        <?php component('linked_section.section', [
             'field_name' => 'gallery',
             'page' => 'Galerie photos'
         ]); ?>
@@ -49,7 +49,7 @@
 
     <section class="even spacing">
 
-        <?php component('home.section', [
+        <?php component('linked_section.section', [
             'field_name' => 'support',
             'page' => 'Nous soutenir'
         ]); ?>
@@ -58,7 +58,7 @@
 
     <section class="odd spacing">
 
-        <?php component('home.section', [
+        <?php component('linked_section.section', [
             'field_name' => 'faq',
             'page' => 'F.A.Q.'
         ]); ?>

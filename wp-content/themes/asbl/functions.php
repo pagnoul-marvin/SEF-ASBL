@@ -4,6 +4,8 @@ const BASE_PATH = __DIR__ . '/';
 require_once BASE_PATH. '../../../vendor/autoload.php';
 
 use Core\View;
+use JetBrains\PhpStorm\NoReturn;
+
 
 add_filter('use_block_editor_for_post', '__return_false');
 
@@ -78,4 +80,14 @@ function get_page_description() :string
     }
 
     return $description;
+}
+
+
+#[NoReturn] function dd(mixed ...$vars): void
+{
+    foreach ($vars as $var) {
+        var_dump($var);
+        echo '<hr>';
+    }
+    exit();
 }

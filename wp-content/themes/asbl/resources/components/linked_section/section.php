@@ -17,7 +17,7 @@
 
 </div>
 
-<a class="section_link" title="Aller vers la page <?= $page ?>"
+<a class="section_link" title="Aller vers la page &laquo;<?= $page ?>&raquo;"
    href="<?= esc_url(get_field($field_name.'_link')['url']); ?>"><?= esc_html(get_field($field_name.'_link')['title']); ?></a>
 
 <p class="section_link_hover"><?= esc_html(get_field($field_name.'_link')['title']); ?></p>
