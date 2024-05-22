@@ -22,7 +22,15 @@ get_header()
 
         </section>
 
-        <section class="even spacing">
+        <section class="even_unlinked_section spacing">
+
+            <?php component('unlinked_section.section', [
+                    'field_name' => 'map',
+            ]); ?>
+
+        </section>
+
+        <section class="odd spacing">
 
             <?php component('linked_section.section', [
                 'field_name' => 'support_section',
