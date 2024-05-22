@@ -11,14 +11,19 @@
      width="<?= get_field($field_name . '_image')['width'] ?>"
      height="<?= get_field($field_name . '_image')['height'] ?>">
 
-
 <div class="center">
 
-    <p class="text"><?= get_field($field_name . '_first_text') ?></p>
+    <?php if ($field_name === 'map' || $field_name === 'mail_contact') { ?>
 
-    <?php if ($field_name !== 'map') { ?>
+        <p class="text"><?= get_field($field_name . '_first_text') ?></p>
+
+
+    <?php } else { ?>
+
+        <p class="text"><?= get_field($field_name . '_first_text') ?></p>
 
         <p class="text"><?= get_field($field_name . '_second_text') ?></p>
 
     <?php } ?>
+
 </div>

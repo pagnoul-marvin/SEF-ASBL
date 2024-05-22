@@ -34,7 +34,7 @@ get_header()
 
             <?php component('linked_section.section', [
                 'field_name' => 'support_section',
-                'page' => 'Nous soutenir'
+                'page' => 'Nous soutenir',
             ]) ?>
 
         </section>

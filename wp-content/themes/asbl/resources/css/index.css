@@ -262,6 +262,21 @@ body main section .shops_positioning {
 body main section .shops_positioning div:first-child {
   margin-bottom: 2.14em;
 }
+body main section form {
+  padding: 0 1em;
+}
+body main section form fieldset {
+  position: relative;
+}
+body main section form fieldset legend {
+  font-family: "Helvetica-Bold", "Arial-Bold", "Roboto-Bold", sans-serif;
+  font-size: 1.375em;
+}
+body main section form fieldset input, body main section form fieldset textarea {
+  border: 1px solid #fff;
+  border-radius: 0.714em;
+  padding: 1.14em;
+}
 body footer {
   background-color: #3E38AD;
   padding-top: 1.5625em;

@@ -308,6 +308,30 @@ body {
           }
         }
       }
+
+      form {
+
+        padding: 0 $base_padding;
+
+        fieldset {
+          position: relative;
+
+          legend {
+            font-family: 'Helvetica-Bold', 'Arial-Bold', 'Roboto-Bold', sans-serif;
+            font-size: $main_title_font_size;
+          }
+
+          label.positioning {
+
+          }
+
+          input, textarea {
+            border: 1px solid $white_color;
+            border-radius: .714em;
+            padding: 1.14em;
+          }
+        }
+      }
     }
   }
 

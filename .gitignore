@@ -36,6 +36,8 @@ wp-content/themes/asbl/.env.local.ini
 !wp-content/themes/asbl/resources/components/linked_section/*
 !wp-content/themes/asbl/resources/components/unlinked_section/*
 !wp-content/themes/asbl/resources/components/list_section/*
+!wp-content/themes/asbl/resources/components/forms/*
+!wp-content/themes/asbl/resources/components/forms/labels_and_input/*
 !wp-content/themes/asbl/resources/css/*
 !wp-content/themes/asbl/resources/sass/*
 !wp-content/themes/asbl/resources/js/*
