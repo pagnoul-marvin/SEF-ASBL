@@ -260,7 +260,7 @@ body {
 
   main {
     section {
-      .houses {
+      .houses, .shops {
         margin: 1.875em 1em 0 1em;
 
         &:not(:last-child) {
@@ -277,8 +277,34 @@ body {
             list-style: inside;
 
             &:not(:last-child) {
-              margin-bottom: 1.07em;
+              margin-bottom: 1.14em;
             }
+          }
+        }
+      }
+
+      .shops {
+
+        position: relative;
+
+        .filter {
+          border-radius: $section_border_radius 0;
+          margin-bottom: 0;
+        }
+
+        &_list_title {
+          font-family: 'Helvetica-Bold', 'Arial-Bold', 'Roboto-Bold', sans-serif;
+          margin-bottom: 1.43em;
+        }
+
+        &_positioning {
+          position: absolute;
+          left: 3.43em;
+          top: 3.43em;
+          z-index: 1;
+
+          div:first-child {
+            margin-bottom: 2.14em;
           }
         }
       }
@@ -288,11 +314,10 @@ body {
   footer {
     background-color: $light_blue_color;
     padding-top: $medium_padding;
-
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    gap: 1.875em;
+    gap: 2.1875em;
 
     nav {
 
@@ -301,7 +326,7 @@ body {
         gap: 1em;
 
         ul.flex_container {
-          gap: 0.625em;
+          gap: 1.14em;
 
           li {
             a {

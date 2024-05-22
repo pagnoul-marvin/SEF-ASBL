@@ -226,21 +226,41 @@ body header .main_nav input[type=checkbox]:checked ~ label[for=burger_menu] span
 body header .main_nav input[type=checkbox]:checked ~ label[for=burger_menu] span.line:after {
   transform: rotate(45deg);
 }
-body main section .houses {
+body main section .houses, body main section .shops {
   margin: 1.875em 1em 0 1em;
 }
-body main section .houses:not(:last-child) {
+body main section .houses:not(:last-child), body main section .shops:not(:last-child) {
   border-bottom: 1px solid #fff;
   padding-bottom: 1.875em;
 }
-body main section .houses img {
+body main section .houses img, body main section .shops img {
   margin-bottom: 0.9375em;
 }
-body main section .houses_list_element {
+body main section .houses_list_element, body main section .shops_list_element {
   list-style: inside;
 }
-body main section .houses_list_element:not(:last-child) {
-  margin-bottom: 1.07em;
+body main section .houses_list_element:not(:last-child), body main section .shops_list_element:not(:last-child) {
+  margin-bottom: 1.14em;
+}
+body main section .shops {
+  position: relative;
+}
+body main section .shops .filter {
+  border-radius: 3.75em 0;
+  margin-bottom: 0;
+}
+body main section .shops_list_title {
+  font-family: "Helvetica-Bold", "Arial-Bold", "Roboto-Bold", sans-serif;
+  margin-bottom: 1.43em;
+}
+body main section .shops_positioning {
+  position: absolute;
+  left: 3.43em;
+  top: 3.43em;
+  z-index: 1;
+}
+body main section .shops_positioning div:first-child {
+  margin-bottom: 2.14em;
 }
 body footer {
   background-color: #3E38AD;
@@ -248,14 +268,14 @@ body footer {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  gap: 1.875em;
+  gap: 2.1875em;
 }
 body footer nav.socials_nav, body footer nav.footer_nav, body footer nav.contact_nav, body footer nav.partners_nav {
   padding: 0 1em;
   gap: 1em;
 }
 body footer nav.socials_nav ul.flex_container, body footer nav.footer_nav ul.flex_container, body footer nav.contact_nav ul.flex_container, body footer nav.partners_nav ul.flex_container {
-  gap: 0.625em;
+  gap: 1.14em;
 }
 body footer nav.socials_nav ul.flex_container li a, body footer nav.footer_nav ul.flex_container li a, body footer nav.contact_nav ul.flex_container li a, body footer nav.partners_nav ul.flex_container li a {
   font-family: "Helvetica-Roman", "Arial-Regular", "Roboto-Regular", sans-serif;

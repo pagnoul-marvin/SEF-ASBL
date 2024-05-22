@@ -24,7 +24,7 @@
 
         <?php component('linked_section.section', [
             'field_name' => 'shop',
-            'page' => 'Nos magasins'
+            'page' => 'Nos magasins de seconde main'
         ]); ?>
 
     </section>

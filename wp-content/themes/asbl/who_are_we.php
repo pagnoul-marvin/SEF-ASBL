@@ -21,16 +21,20 @@ get_header()
                 'field_name' => 'houses',
                 'second_field_name' => 'first_house',
                 'third_field_name' => 'second_house',
+                'fourth_field_name' => null,
                 'article_class' => 'houses',
+                'image_class' => null,
         ]); ?>
 
     </section>
 
     <section class="odd spacing">
+
         <?php component('linked_section.section', [
                 'field_name' => 'support_section',
                 'page' => 'Nous soutenir'
         ]) ?>
+
     </section>
 
 
