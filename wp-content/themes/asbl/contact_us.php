@@ -23,7 +23,9 @@ get_header()
         ]); ?>
 
         <?php component('forms.contact_form', [
-                'first_legend' => 'Vos coordonées',
+                'form_action' => get_site_url().$_SERVER['REQUEST_URI'],
+                'form_id'=> 'contact_form',
+                'first_legend' => 'Vos coordonnées',
                 'second_legend' => 'Votre message',
                 'first_field_name' => 'mail_contact',
                 'second_field_name' => 'firstname',
