@@ -108,6 +108,15 @@ img {
   padding: 0 1em;
 }
 
+.note {
+  margin-top: 3.58em;
+  text-indent: 1.86em;
+  background-image: url("../images/warning.svg");
+  background-repeat: no-repeat;
+  background-position: left -5%;
+  padding-top: 0.71em;
+}
+
 h1, h2, .link_hover, .section_link_hover {
   font-family: "Helvetica-Bold", "Arial-Bold", "Roboto-Bold", sans-serif;
 }
@@ -264,18 +273,51 @@ body main section .shops_positioning div:first-child {
 }
 body main section form {
   padding: 0 1em;
+  margin-top: 1.875em;
 }
 body main section form fieldset {
-  position: relative;
+  gap: 2.5em;
+}
+body main section form fieldset:first-of-type {
+  margin-bottom: 3.125em;
 }
 body main section form fieldset legend {
   font-family: "Helvetica-Bold", "Arial-Bold", "Roboto-Bold", sans-serif;
   font-size: 1.375em;
+  margin-bottom: 1.4em;
+}
+body main section form fieldset div {
+  position: relative;
+}
+body main section form fieldset div label.label_positioning {
+  position: absolute;
+  left: 1.14em;
+  top: -0.5em;
+  padding: 0 0.5em;
+  background-color: #27236F;
 }
 body main section form fieldset input, body main section form fieldset textarea {
   border: 1px solid #fff;
   border-radius: 0.714em;
   padding: 1.14em;
+  background-color: transparent;
+  width: calc(100% - 2.29em - 2px);
+  color: #fff;
+}
+body main section form fieldset input::placeholder, body main section form fieldset textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+body main section form input[type=submit] {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 0.4545em;
+  margin-top: 0.91em;
+  width: 100%;
+  font-family: "Helvetica-Bold", "Arial-Bold", "Roboto-Bold", sans-serif;
+  font-size: 1.375em;
+  text-transform: uppercase;
+  padding: 0.73em;
 }
 body footer {
   background-color: #3E38AD;

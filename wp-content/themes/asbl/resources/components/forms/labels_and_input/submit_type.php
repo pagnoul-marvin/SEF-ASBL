@@ -1,1 +1,1 @@
-<input type="submit" name="envoyer" value="ENVOYER">
+<input type="submit" name="envoyer" value="soumettre">
