@@ -1,6 +1,15 @@
 //sass --watch index.scss:../css/index.css
 @import "variables";
 
+#progress_bar {
+  background-color: $white_color;
+  height: .3em;
+  position: fixed;
+  bottom: 0;
+  width: 0;
+  border-radius: .15em;
+}
+
 .hidden {
   overflow: hidden !important;
   font-size: 0 !important;

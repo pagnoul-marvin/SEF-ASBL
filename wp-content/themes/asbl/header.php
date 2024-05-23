@@ -10,7 +10,7 @@
     <meta name="keywords" content="SEF, sef, ASBL, asbl, Service d'entraide familiale, maisons, précarité">
     <link rel="stylesheet" href="<?= dw_asset('css/reset.css') ?>">
     <link rel="stylesheet" href="<?= dw_asset('css/index.css') ?>">
-    <link rel="stylesheet" href="<?= dw_asset('js/main.js') ?>">
+    <script type="module" src="<?= dw_asset('js/main.js'); ?>"></script>
     <title>ASBL SEF &ndash; <?= get_the_title() ?></title>
 </head>
 <body>

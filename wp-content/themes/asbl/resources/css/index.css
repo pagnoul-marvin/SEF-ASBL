@@ -1,3 +1,12 @@
+#progress_bar {
+  background-color: #fff;
+  height: 0.3em;
+  position: fixed;
+  bottom: 0;
+  width: 0;
+  border-radius: 0.15em;
+}
+
 .hidden {
   overflow: hidden !important;
   font-size: 0 !important;
