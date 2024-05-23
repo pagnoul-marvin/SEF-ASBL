@@ -76,18 +76,47 @@ img {
   line-height: 1.43em;
 }
 
-.even, .odd, .even_unlinked_section, .odd_unlinked_section {
+.even, .odd, .even_unlinked_section, .odd_unlinked_section, .odd_faq, .even_faq {
   border-radius: $section_border_radius 0;
-  padding-bottom: 3.125em;
   overflow: hidden;
   position: relative;
+  padding-bottom: 3.125em;
   box-shadow: 0 6px 9px $box_shadow_color;
+}
+
+.even, .odd {
+  &_faq {
+    padding-left: 1em;
+    padding-right: 1em;
+
+    h2 {
+      margin-top: 2.27em;
+      line-height: 1.23em;
+    }
+
+    .center {
+      padding: 0;
+    }
+
+    .faq_links {
+      margin-top: 2.14em;
+      &_list {
+        margin-top: 1.43em;
+        &_element {
+          list-style: inside;
+          &:not(:last-child) {
+            margin-bottom: 1.14em;
+          }
+        }
+      }
+    }
+  }
 }
 
 .even {
   background: linear-gradient(to bottom, $dark_blue_color 85%, $light_blue_color 15%);
 
-  &_unlinked_section {
+  &_unlinked_section, &_faq {
     background-color: $dark_blue_color;
 
     .center {
@@ -103,7 +132,7 @@ img {
 .odd {
   background: linear-gradient(to bottom, $light_blue_color 85%, $dark_blue_color 15%);
 
-  &_unlinked_section {
+  &_unlinked_section, &_faq {
     background-color: $light_blue_color;
 
     .center {

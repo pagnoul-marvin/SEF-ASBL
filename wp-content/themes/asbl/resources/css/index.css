@@ -72,37 +72,61 @@ img {
   line-height: 1.43em;
 }
 
-.even, .odd, .even_unlinked_section, .odd_unlinked_section {
+.even, .odd, .even_unlinked_section, .odd_unlinked_section, .odd_faq, .even_faq {
   border-radius: 3.75em 0;
-  padding-bottom: 3.125em;
   overflow: hidden;
   position: relative;
+  padding-bottom: 3.125em;
   box-shadow: 0 6px 9px rgba(0, 0, 0, 0.5);
+}
+
+.even_faq, .odd_faq {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.even_faq h2, .odd_faq h2 {
+  margin-top: 2.27em;
+  line-height: 1.23em;
+}
+.even_faq .center, .odd_faq .center {
+  padding: 0;
+}
+.even_faq .faq_links, .odd_faq .faq_links {
+  margin-top: 2.14em;
+}
+.even_faq .faq_links_list, .odd_faq .faq_links_list {
+  margin-top: 1.43em;
+}
+.even_faq .faq_links_list_element, .odd_faq .faq_links_list_element {
+  list-style: inside;
+}
+.even_faq .faq_links_list_element:not(:last-child), .odd_faq .faq_links_list_element:not(:last-child) {
+  margin-bottom: 1.14em;
 }
 
 .even {
   background: linear-gradient(to bottom, #27236F 85%, #3E38AD 15%);
 }
-.even_unlinked_section {
+.even_unlinked_section, .even_faq {
   background-color: #27236F;
 }
-.even_unlinked_section .center {
+.even_unlinked_section .center, .even_faq .center {
   margin-bottom: 0;
 }
-.even_unlinked_section .center .text:not(:last-child) {
+.even_unlinked_section .center .text:not(:last-child), .even_faq .center .text:not(:last-child) {
   margin-bottom: 1em;
 }
 
 .odd {
   background: linear-gradient(to bottom, #3E38AD 85%, #27236F 15%);
 }
-.odd_unlinked_section {
+.odd_unlinked_section, .odd_faq {
   background-color: #3E38AD;
 }
-.odd_unlinked_section .center {
+.odd_unlinked_section .center, .odd_faq .center {
   margin-bottom: 0;
 }
-.odd_unlinked_section .center .text:not(:last-child) {
+.odd_unlinked_section .center .text:not(:last-child), .odd_faq .center .text:not(:last-child) {
   margin-bottom: 1em;
 }
 
