@@ -7,6 +7,13 @@
   border-radius: 0.15em;
 }
 
+#last_modification {
+  background-color: #3E38AD;
+  padding: 3.57em 1.14em;
+  border-radius: 3.75em 0;
+  margin-top: 3.57em;
+}
+
 .hidden {
   overflow: hidden !important;
   font-size: 0 !important;
@@ -76,12 +83,28 @@ img {
   line-height: 1.43em;
 }
 
-.even, .odd, .even_unlinked_section, .odd_unlinked_section, .odd_faq, .even_faq {
+.even, .odd, .even_unlinked_section, .odd_unlinked_section, .odd_faq, .even_faq, .ln_odd_unlinked_section, .ln_even_unlinked_section {
   border-radius: 3.75em 0;
   overflow: hidden;
   position: relative;
   padding-bottom: 3.125em;
   box-shadow: 0 6px 9px rgba(0, 0, 0, 0.5);
+}
+
+.ln_odd_unlinked_section, .ln_even_unlinked_section {
+  padding: 3.125em 1em;
+}
+.ln_odd_unlinked_section div.center, .ln_even_unlinked_section div.center {
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.ln_odd_unlinked_section {
+  background-color: #3E38AD;
+}
+
+.ln_even_unlinked_section {
+  background-color: #27236F;
 }
 
 .even_faq, .odd_faq {
