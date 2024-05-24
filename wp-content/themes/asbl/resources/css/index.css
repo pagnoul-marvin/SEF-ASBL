@@ -362,6 +362,46 @@ body main section form#contact_form input[type=submit], body main section form#s
   text-transform: uppercase;
   padding: 0.73em;
 }
+body main section#slider {
+  position: unset;
+  padding: 3.125em 1em;
+}
+body main section#slider #slideshow {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 29.9375em;
+  margin-top: 1em;
+}
+body main section#slider #slideshow_content {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 500%;
+  transition: left 1s;
+}
+body main section#slider #slideshow_content li {
+  display: inline-block;
+  width: 20%;
+  height: 100%;
+}
+body main section#slider #slideshow_content li img {
+  height: 100%;
+}
+body main section#slider .flex_container {
+  flex-direction: row;
+  margin-top: 2.14em;
+}
+body main section#slider .flex_container button {
+  border-radius: 0.714em;
+  flex-basis: calc(50% - 1em);
+  background-color: transparent;
+  border: 1px solid #fff;
+  padding: 1.14em;
+}
 body footer {
   background-color: #3E38AD;
   padding-top: 1.5625em;

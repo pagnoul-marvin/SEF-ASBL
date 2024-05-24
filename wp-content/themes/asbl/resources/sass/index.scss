@@ -100,10 +100,13 @@ img {
 
     .faq_links {
       margin-top: 2.14em;
+
       &_list {
         margin-top: 1.43em;
+
         &_element {
           list-style: inside;
+
           &:not(:last-child) {
             margin-bottom: 1.14em;
           }
@@ -430,6 +433,53 @@ body {
             padding: .73em;
           }
         }
+      }
+
+      &#slider {
+        position: unset;
+        padding: 3.125em 1em;
+
+        #slideshow {
+          position: relative;
+          width: 100%;
+          overflow: hidden;
+          height: 29.9375em;
+          margin-top: 1em;
+
+          &_content {
+            position: absolute;
+            height: 100%;
+            top: 0;
+            left: 0;
+            margin: 0;
+            padding: 0;
+            width: 500%;
+            transition: left 1s;
+
+            li {
+              display: inline-block;
+              width: 20%;
+              height: 100%;
+
+              img {
+                height: 100%;
+              }
+            }
+          }
+        }
+
+        .flex_container {
+          flex-direction: row;
+          margin-top: 2.14em;
+          button {
+            border-radius: .714em;
+            flex-basis: calc(50% - 1em);
+            background-color: transparent;
+            border: 1px solid $white_color;
+            padding: 1.14em;
+          }
+        }
+
       }
     }
   }

@@ -2,7 +2,6 @@
 /** @var string $field_name */
 ?>
 
-
 <h2 class="section_second_title"><?= get_field($field_name . '_title') ?></h2>
 
 
@@ -13,10 +12,9 @@
 
 <div class="center">
 
-    <?php if ($field_name === 'map' || $field_name === 'mail_contact') { ?>
+    <?php if ($field_name === 'map' || $field_name === 'mail_contact' || $field_name === 'first_project') { ?>
 
         <p class="text"><?= get_field($field_name . '_first_text') ?></p>
-
 
     <?php } else { ?>
 
