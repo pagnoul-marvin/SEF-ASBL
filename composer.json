@@ -8,7 +8,10 @@
     },
     "autoload": {
         "psr-4": {
-            "Core\\": "wp-content/themes/asbl/core/"
+            "Core\\": "wp-content/themes/asbl/core/",
+            "Core\\Exceptions\\": "wp-content/themes/asbl/core/exceptions/",
+            "Validator\\": "wp-content/themes/asbl/validator/",
+            "App\\Models\\": "wp-content/themes/asbl/app/models/"
         }
     },
     "authors": [

@@ -29,6 +29,10 @@ wp-content/themes/*
 wp-content/themes/asbl/.env.local.ini
 !wp-content/themes/asbl/helpers/*
 !wp-content/themes/asbl/core/*
+!wp-content/themes/asbl/core/exceptions/*
+!wp-content/themes/asbl/validator/*
+!wp-content/themes/asbl/app/*
+!wp-content/themes/asbl/app/models/*
 !wp-content/themes/asbl/resources/*
 !wp-content/themes/asbl/resources/components/*
 !wp-content/themes/asbl/resources/components/navigations/*

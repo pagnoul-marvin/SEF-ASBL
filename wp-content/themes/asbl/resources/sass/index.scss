@@ -10,6 +10,18 @@
   border-radius: .15em;
 }
 
+#error {
+  padding: 3.125em 1em;
+  background: linear-gradient(to bottom, $light_blue_color 65%, $dark_blue_color 35%);
+  h2 {
+    margin-bottom: 1.7em;
+  }
+
+  p{
+    margin-bottom: 6.07em;
+  }
+}
+
 #last_modification {
   background-color: $light_blue_color;
   padding: 3.57em 1.14em;
@@ -30,6 +42,12 @@
 
 .no_display {
   display: none;
+}
+
+.validation_errors {
+  color: $error_color;
+  font-family: 'Helvetica-Bold', 'Arial-Bold', 'Roboto-Bold', sans-serif;
+  margin-top: 1.14em;
 }
 
 .hidden {

@@ -7,6 +7,17 @@
   border-radius: 0.15em;
 }
 
+#error {
+  padding: 3.125em 1em;
+  background: linear-gradient(to bottom, #3E38AD 65%, #27236F 35%);
+}
+#error h2 {
+  margin-bottom: 1.7em;
+}
+#error p {
+  margin-bottom: 6.07em;
+}
+
 #last_modification {
   background-color: #3E38AD;
   padding: 3.57em 1.14em;
@@ -27,6 +38,12 @@
 
 .no_display {
   display: none;
+}
+
+.validation_errors {
+  color: #702424;
+  font-family: "Helvetica-Bold", "Arial-Bold", "Roboto-Bold", sans-serif;
+  margin-top: 1.14em;
 }
 
 .hidden {
