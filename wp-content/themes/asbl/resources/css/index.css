@@ -45,11 +45,12 @@
 
 .section_link_hover {
   background-repeat: no-repeat;
-  background-position: calc(50% + 7em);
+  background-position: right;
   background-image: url("../images/link_arrow.svg");
   display: inline-block;
-  width: calc(100% - 2.28em);
-  padding: 0 1.14em;
+  padding-right: 4em;
+  text-align: center;
+  margin-left: calc(50% - 7.15em);
 }
 
 .flex_container {
@@ -66,8 +67,8 @@ img {
 
 .filter {
   filter: brightness(0.4);
-  border-radius: 0;
   height: 29.9375em;
+  border-radius: 0;
 }
 
 .black_and_white {
@@ -163,7 +164,7 @@ img {
 .section_second_title {
   text-align: center;
   position: absolute;
-  top: 10.88em;
+  top: 9.52em;
   font-size: 1.57em;
   z-index: 1;
   width: calc(100% - 2em);
@@ -515,10 +516,28 @@ body footer section#legal_notices a {
   }
 }
 @media (width >= 1000px) {
-  footer div.flex_container {
+  body main .even {
+    background: linear-gradient(to bottom, #27236F 89%, #3E38AD 11%);
+  }
+  body main .odd {
+    background: linear-gradient(to bottom, #3E38AD 89%, #27236F 11%);
+  }
+  body main .filter {
+    height: 50em;
+  }
+  body main .section_second_title {
+    top: 15.9em;
+  }
+  body main .center {
+    margin-top: 3em;
+  }
+  body main section#slider #slideshow {
+    height: 50em;
+  }
+  body footer div.flex_container {
     flex-direction: row;
   }
-  footer div.flex_container nav.footer_nav, footer div.flex_container nav.contact_nav, footer div.flex_container nav.socials_nav, footer div.flex_container nav.partners_nav {
+  body footer div.flex_container nav.footer_nav, body footer div.flex_container nav.contact_nav, body footer div.flex_container nav.socials_nav, body footer div.flex_container nav.partners_nav {
     display: unset;
   }
 }

@@ -23,6 +23,7 @@
        href="<?= esc_url(get_field($field_name . '_link')['url']); ?>"><?= esc_html(get_field($field_name . '_link')['title']); ?></a>
 
     <p class="section_link_hover"><?= esc_html(get_field($field_name . '_link')['title']); ?></p>
+
 <?php } else { ?>
 
     <a class="section_link" title="Appeler le numéro &laquo;<?= get_field($field_name.'_link') ?>&raquo;"
@@ -31,5 +32,7 @@
     <p class="section_link_hover"><?= esc_html(get_field($field_name . '_link')); ?></p>
 
 <?php } ?>
+
+
 
 
