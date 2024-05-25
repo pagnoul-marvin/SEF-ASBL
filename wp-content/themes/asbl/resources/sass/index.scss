@@ -49,11 +49,11 @@
 
 .section_link_hover {
   background-repeat: no-repeat;
-  background-position: 75%;
+  background-position: calc(50% + 7em);
   background-image: url("../images/link_arrow.svg");
   display: inline-block;
-  width: 100%;
-  text-indent: 25%;
+  width: calc(100% - 2.28em);
+  padding: 0 1.14em;
 }
 
 .flex_container {
@@ -80,7 +80,7 @@ img {
 
 .center {
   padding: 0 $base_padding;
-  margin: 2.36em 0 6.14em;
+  margin: 2.14em 0 6.14em;
 }
 
 .text {
@@ -101,6 +101,10 @@ img {
   div.center {
     padding: 0;
     margin-bottom: 0;
+
+    &:has(p:nth-of-type(4)) p:not(:last-child) {
+      margin-bottom: .71em;
+    }
   }
 }
 
@@ -380,7 +384,7 @@ body {
 
         &_positioning {
           position: absolute;
-          left: 3.43em;
+          left: calc(50% - 8.29em);
           top: 3.43em;
           z-index: 1;
 
@@ -472,6 +476,10 @@ body {
         position: unset;
         padding: 3.125em 1em;
 
+        h2 {
+          margin-bottom: 1.7em;
+        }
+
         #slideshow {
           position: relative;
           width: 100%;
@@ -521,49 +529,49 @@ body {
 
   footer {
     background-color: $light_blue_color;
-    padding-top: $medium_padding;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    gap: 2.1875em;
 
-    nav {
+    div.flex_container {
+      gap: 1.875em;
+      padding: $medium_padding 0;
 
-      &.socials_nav, &.footer_nav, &.contact_nav, &.partners_nav {
-        padding: 0 $base_padding;
-        gap: 1em;
+      nav {
 
-        ul.flex_container {
-          gap: 1.14em;
+        &.socials_nav, &.footer_nav, &.contact_nav, &.partners_nav {
+          padding: 0 $base_padding;
+          gap: 1em;
 
+          ul.flex_container {
+            gap: 1.14em;
+
+            li {
+              a {
+                font-family: 'Helvetica-Roman', 'Arial-Regular', 'Roboto-Regular', sans-serif;
+                font-weight: normal;
+                font-size: $text_font_size;
+              }
+            }
+          }
+        }
+
+        &.contact_nav {
           li {
-            a {
-              font-family: 'Helvetica-Roman', 'Arial-Regular', 'Roboto-Regular', sans-serif;
-              font-weight: normal;
+            p {
               font-size: $text_font_size;
             }
           }
         }
-      }
 
-      &.contact_nav {
-        li {
-          p {
-            font-size: $text_font_size;
-          }
-        }
-      }
-
-      &.socials_nav {
-        li {
-          a {
-            background-position: center;
-            background-repeat: no-repeat;
-            background-image: url("../images/facebook_icon.svg");
-            width: 40px;
-            height: 40px;
-            text-indent: -10000px;
-            display: inline-block;
+        &.socials_nav {
+          li {
+            a {
+              background-position: center;
+              background-repeat: no-repeat;
+              background-image: url("../images/facebook_icon.svg");
+              width: 40px;
+              height: 40px;
+              text-indent: -10000px;
+              display: inline-block;
+            }
           }
         }
       }
@@ -572,11 +580,75 @@ body {
     section#legal_notices {
       background-color: $dark_blue_color;
       padding: $medium_padding $base_padding;
-      gap: 0.625em;
+
+      p {
+        margin-bottom: .71em;
+      }
 
       a {
         font-family: 'Helvetica-Roman', 'Arial-Regular', 'Roboto-Regular', sans-serif;
         font-weight: normal;
+      }
+    }
+  }
+}
+
+
+@media (width >= 700px) {
+  body {
+
+    h1 {
+      margin: 8.359375em 3.2em 0 3.2em;
+    }
+
+    header {
+      padding: 1.5625em 5em;
+      width: calc(100% - 10em);
+
+      .main_nav {
+        div {
+          transform: translateX(-5em);
+
+          ul.flex_container {
+            padding: 7.5em 5em;
+          }
+        }
+      }
+    }
+
+    main {
+      padding: 0 5em;
+    }
+
+    footer {
+
+      div.flex_container {
+        padding: $medium_padding 5em;
+
+        nav.footer_nav, nav.contact_nav, nav.socials_nav, nav.partners_nav {
+          padding: 0;
+
+          h2 {
+            margin-bottom: .73em;
+          }
+        }
+      }
+
+      section#legal_notices {
+        padding: 1.5625em 5em;
+      }
+    }
+  }
+}
+
+@media (width >= 1000px) {
+  footer {
+
+    div.flex_container {
+      flex-direction: row;
+
+      nav.footer_nav, nav.contact_nav, nav.socials_nav, nav.partners_nav {
+        display: unset;
       }
     }
   }

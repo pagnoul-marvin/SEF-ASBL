@@ -45,11 +45,11 @@
 
 .section_link_hover {
   background-repeat: no-repeat;
-  background-position: 75%;
+  background-position: calc(50% + 7em);
   background-image: url("../images/link_arrow.svg");
   display: inline-block;
-  width: 100%;
-  text-indent: 25%;
+  width: calc(100% - 2.28em);
+  padding: 0 1.14em;
 }
 
 .flex_container {
@@ -76,7 +76,7 @@ img {
 
 .center {
   padding: 0 1em;
-  margin: 2.36em 0 6.14em;
+  margin: 2.14em 0 6.14em;
 }
 
 .text {
@@ -97,6 +97,9 @@ img {
 .ln_odd_unlinked_section div.center, .ln_even_unlinked_section div.center {
   padding: 0;
   margin-bottom: 0;
+}
+.ln_odd_unlinked_section div.center:has(p:nth-of-type(4)) p:not(:last-child), .ln_even_unlinked_section div.center:has(p:nth-of-type(4)) p:not(:last-child) {
+  margin-bottom: 0.71em;
 }
 
 .ln_odd_unlinked_section {
@@ -161,7 +164,7 @@ img {
   text-align: center;
   position: absolute;
   top: 10.88em;
-  font-size: 1.375em;
+  font-size: 1.57em;
   z-index: 1;
   width: calc(100% - 2em);
   line-height: 1.23em;
@@ -183,7 +186,7 @@ h1, h2, .link_hover, .section_link_hover {
 }
 
 h1 {
-  font-size: 1.375em;
+  font-size: 1.57em;
   background-color: #27236F;
   border-radius: 3.75em 0;
   padding: 1.5625em;
@@ -191,7 +194,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.125em;
+  font-size: 1.29em;
 }
 
 body {
@@ -277,7 +280,7 @@ body header .main_nav div ul.flex_container li {
   padding-bottom: 2.1875em;
 }
 body header .main_nav div ul.flex_container li a {
-  font-size: 1.375em;
+  font-size: 1.57em;
 }
 body header .main_nav input[type=checkbox] {
   visibility: hidden;
@@ -327,7 +330,7 @@ body main section .shops_list_title {
 }
 body main section .shops_positioning {
   position: absolute;
-  left: 3.43em;
+  left: calc(50% - 8.29em);
   top: 3.43em;
   z-index: 1;
 }
@@ -356,7 +359,7 @@ body main section form#contact_form fieldset:first-of-type, body main section fo
 body main section form#contact_form fieldset legend, body main section form#support_form fieldset legend {
   font-family: "Helvetica-Bold", "Arial-Bold", "Roboto-Bold", sans-serif;
   font-weight: bold;
-  font-size: 1.375em;
+  font-size: 1.57em;
   margin-bottom: 1.4em;
 }
 body main section form#contact_form fieldset div, body main section form#support_form fieldset div {
@@ -390,13 +393,16 @@ body main section form#contact_form input[type=submit], body main section form#s
   width: 100%;
   font-family: "Helvetica-Bold", "Arial-Bold", "Roboto-Bold", sans-serif;
   font-weight: bold;
-  font-size: 1.375em;
+  font-size: 1.57em;
   text-transform: uppercase;
   padding: 0.73em;
 }
 body main section#slider {
   position: unset;
   padding: 3.125em 1em;
+}
+body main section#slider h2 {
+  margin-bottom: 1.7em;
 }
 body main section#slider #slideshow {
   position: relative;
@@ -437,28 +443,27 @@ body main section#slider .flex_container button {
 }
 body footer {
   background-color: #3E38AD;
-  padding-top: 1.5625em;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  gap: 2.1875em;
 }
-body footer nav.socials_nav, body footer nav.footer_nav, body footer nav.contact_nav, body footer nav.partners_nav {
+body footer div.flex_container {
+  gap: 1.875em;
+  padding: 1.5625em 0;
+}
+body footer div.flex_container nav.socials_nav, body footer div.flex_container nav.footer_nav, body footer div.flex_container nav.contact_nav, body footer div.flex_container nav.partners_nav {
   padding: 0 1em;
   gap: 1em;
 }
-body footer nav.socials_nav ul.flex_container, body footer nav.footer_nav ul.flex_container, body footer nav.contact_nav ul.flex_container, body footer nav.partners_nav ul.flex_container {
+body footer div.flex_container nav.socials_nav ul.flex_container, body footer div.flex_container nav.footer_nav ul.flex_container, body footer div.flex_container nav.contact_nav ul.flex_container, body footer div.flex_container nav.partners_nav ul.flex_container {
   gap: 1.14em;
 }
-body footer nav.socials_nav ul.flex_container li a, body footer nav.footer_nav ul.flex_container li a, body footer nav.contact_nav ul.flex_container li a, body footer nav.partners_nav ul.flex_container li a {
+body footer div.flex_container nav.socials_nav ul.flex_container li a, body footer div.flex_container nav.footer_nav ul.flex_container li a, body footer div.flex_container nav.contact_nav ul.flex_container li a, body footer div.flex_container nav.partners_nav ul.flex_container li a {
   font-family: "Helvetica-Roman", "Arial-Regular", "Roboto-Regular", sans-serif;
   font-weight: normal;
   font-size: 0.875em;
 }
-body footer nav.contact_nav li p {
+body footer div.flex_container nav.contact_nav li p {
   font-size: 0.875em;
 }
-body footer nav.socials_nav li a {
+body footer div.flex_container nav.socials_nav li a {
   background-position: center;
   background-repeat: no-repeat;
   background-image: url("../images/facebook_icon.svg");
@@ -470,11 +475,52 @@ body footer nav.socials_nav li a {
 body footer section#legal_notices {
   background-color: #27236F;
   padding: 1.5625em 1em;
-  gap: 0.625em;
+}
+body footer section#legal_notices p {
+  margin-bottom: 0.71em;
 }
 body footer section#legal_notices a {
   font-family: "Helvetica-Roman", "Arial-Regular", "Roboto-Regular", sans-serif;
   font-weight: normal;
+}
+
+@media (width >= 700px) {
+  body h1 {
+    margin: 8.359375em 3.2em 0 3.2em;
+  }
+  body header {
+    padding: 1.5625em 5em;
+    width: calc(100% - 10em);
+  }
+  body header .main_nav div {
+    transform: translateX(-5em);
+  }
+  body header .main_nav div ul.flex_container {
+    padding: 7.5em 5em;
+  }
+  body main {
+    padding: 0 5em;
+  }
+  body footer div.flex_container {
+    padding: 1.5625em 5em;
+  }
+  body footer div.flex_container nav.footer_nav, body footer div.flex_container nav.contact_nav, body footer div.flex_container nav.socials_nav, body footer div.flex_container nav.partners_nav {
+    padding: 0;
+  }
+  body footer div.flex_container nav.footer_nav h2, body footer div.flex_container nav.contact_nav h2, body footer div.flex_container nav.socials_nav h2, body footer div.flex_container nav.partners_nav h2 {
+    margin-bottom: 0.73em;
+  }
+  body footer section#legal_notices {
+    padding: 1.5625em 5em;
+  }
+}
+@media (width >= 1000px) {
+  footer div.flex_container {
+    flex-direction: row;
+  }
+  footer div.flex_container nav.footer_nav, footer div.flex_container nav.contact_nav, footer div.flex_container nav.socials_nav, footer div.flex_container nav.partners_nav {
+    display: unset;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

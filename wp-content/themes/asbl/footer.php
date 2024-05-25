@@ -1,4 +1,6 @@
-    <footer class="spacing">
+<footer class="spacing">
+
+    <div class="flex_container">
         <?php component('navigations.main_navigation', [
             'nav_title' => 'Navigation',
             'nav_title_class' => '',
@@ -23,16 +25,20 @@
             'location' => 'partners'
         ]) ?>
 
-        <section id="legal_notices" class="flex_container">
-            <h2 class="hidden">Mentions l&eacute;gales</h2>
-            <p>&copy; 2024 ASBL SEF. Tous droits r&eacute;serv&eacute;s.</p>
-            <p>Cr&eacute;&eacute; par <a class="link_hover" title="Aller vers le site du portfolio de Marvin Pagnoul" hreflang="fr" href="https://portfolio.marvinpagnoul.be">Marvin Pagnoul</a></p>
-            <a class="link_hover" href="http://site_sef.test/mentions-legales" hreflang="fr" title="Aller vers la page des mentions légales">Mentions l&eacute;gales</a>
-        </section>
+    </div>
 
-    </footer>
+    <section id="legal_notices" class="flex_container">
+        <h2 class="hidden">Mentions l&eacute;gales</h2>
+        <p>&copy; 2024 ASBL SEF. Tous droits r&eacute;serv&eacute;s.</p>
+        <p>Cr&eacute;&eacute; par <a class="link_hover" title="Aller vers le site du portfolio de Marvin Pagnoul"
+                                     hreflang="fr" href="https://portfolio.marvinpagnoul.be">Marvin Pagnoul</a></p>
+        <a class="link_hover" href="http://site_sef.test/mentions-legales" hreflang="fr"
+           title="Aller vers la page des mentions légales">Mentions l&eacute;gales</a>
+    </section>
 
-    <div id="progress_bar"></div>
+</footer>
+
+<div id="progress_bar"></div>
 
 </body>
 
