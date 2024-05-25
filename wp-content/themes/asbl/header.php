@@ -25,3 +25,12 @@
         ]) ?>
 
     </header>
+
+    <section id="no_js_banner" class="spacing">
+
+        <h2>Votre javascript semble ne pas &ecirc;tre activ&eacute;</h2>
+
+        <p class="text">Afin de pleinement profiter de toutes les fonctionnalit&eacute; du site, vous devriez activer Javascript. Pour activer Javascript sur votre navigateur veuillez suivre cette aide de Google&nbsp;:
+            <a class="link_hover" href="https://support.google.com/adsense/answer/12654?hl=fr" hreflang="fr" title="Aller vers la page d'aide de Google">activer Javascript</a>.</p>
+
+    </section>

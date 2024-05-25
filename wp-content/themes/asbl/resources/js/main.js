@@ -8,6 +8,7 @@ const sef = {
 
     init() {
         this.addEventListeners();
+        this.noJs();
     },
 
     addEventListeners() {
@@ -20,6 +21,10 @@ const sef = {
                 this.changeImageInSliderOnClick(e);
             });
         });
+    },
+
+    noJs() {
+        settings.noJsBannerElement.classList.add(settings.noDisplayClass);
     },
 
     changeWidthOfProgressBarElement() {

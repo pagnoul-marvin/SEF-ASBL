@@ -17,6 +17,21 @@
   margin-top: 3.57em;
 }
 
+#no_js_banner {
+  background-color: $error_color;
+  border-radius: $section_border_radius 0;
+  padding: 3.125em 1em;
+  margin-left: 5em;
+  margin-right: 5em;
+  h2 {
+      margin-bottom: 1.7em;
+  }
+}
+
+.no_display {
+  display: none;
+}
+
 .hidden {
   overflow: hidden !important;
   font-size: 0 !important;
