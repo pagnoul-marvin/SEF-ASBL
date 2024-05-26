@@ -43,13 +43,14 @@ wp-content/themes/asbl/.env.local.ini
 !wp-content/themes/asbl/resources/components/forms/*
 !wp-content/themes/asbl/resources/components/forms/labels_and_input/*
 !wp-content/themes/asbl/resources/components/sliders/*
-!wp-content/themes/asbl/resources/css/*
-!wp-content/themes/asbl/resources/sass/*
-!wp-content/themes/asbl/resources/js/*
-!wp-content/themes/asbl/resources/images/*
-!wp-content/themes/asbl/resources/fonts/*
-!wp-content/themes/asbl/resources/fonts/arial/*
-!wp-content/themes/asbl/resources/fonts/helvetica_neue/*
-!wp-content/themes/asbl/resources/fonts/roboto/*
+!wp-content/themes/asbl/public/*
+!wp-content/themes/asbl/public/css/*
+!wp-content/themes/asbl/public/sass/*
+!wp-content/themes/asbl/public/js/*
+!wp-content/themes/asbl/public/images/*
+!wp-content/themes/asbl/public/fonts/*
+!wp-content/themes/asbl/public/fonts/arial/*
+!wp-content/themes/asbl/public/fonts/helvetica_neue/*
+!wp-content/themes/asbl/public/fonts/roboto/*
 
 /vendor/

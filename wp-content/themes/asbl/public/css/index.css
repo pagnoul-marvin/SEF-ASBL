@@ -322,7 +322,7 @@ body header .main_nav div ul.flex_container {
 }
 body header .main_nav div ul.flex_container li {
   border-bottom: 1px solid #fff;
-  padding-bottom: 2.1875em;
+  padding-bottom: 1.59em;
 }
 body header .main_nav div ul.flex_container li a {
   font-size: 1.57em;
@@ -594,6 +594,55 @@ body footer section#legal_notices a {
   }
   body footer div.flex_container nav.footer_nav, body footer div.flex_container nav.contact_nav, body footer div.flex_container nav.socials_nav, body footer div.flex_container nav.partners_nav {
     display: unset;
+  }
+}
+@media (width >= 1200px) {
+  body h1 {
+    margin: 8.359375em 6.35em 0 6.35em;
+  }
+  body header {
+    padding: 1.5625em 10em;
+    width: calc(100% - 20em);
+  }
+  body header .main_nav div {
+    transform: translateX(-10em);
+  }
+  body main {
+    padding: 0 10em;
+  }
+  body footer div.flex_container {
+    padding: 1.5625em 10em;
+  }
+  body footer section#legal_notices {
+    padding: 1.5625em 10em;
+  }
+}
+@media (width >= 2100px) {
+  body header .main_nav input[id=burger_menu], body header .main_nav label[for=burger_menu] {
+    display: none;
+  }
+  body header .main_nav div {
+    transform: unset;
+    position: initial;
+    top: unset;
+    visibility: visible;
+    background-color: unset;
+    width: unset;
+    height: unset;
+    overflow: unset;
+  }
+  body header .main_nav div ul.flex_container {
+    padding: unset;
+    flex-direction: row;
+    gap: 3.125em;
+  }
+  body header .main_nav div ul.flex_container .main_nav_item {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  body header .main_nav div ul.flex_container .main_nav_item:not(:last-child) {
+    border-right: 1px solid #fff;
+    padding-right: 1.59em;
   }
 }
 

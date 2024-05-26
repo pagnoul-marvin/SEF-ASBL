@@ -18,7 +18,7 @@ register_nav_menu('partners', 'Navigation des partenaires');
 
 function dw_asset(string $file): string
 {
-    return get_template_directory_uri() . '/resources/' . $file;
+    return get_template_directory_uri() . '/public/' . $file;
 }
 
 function dw_get_navigation_links(string $location): array

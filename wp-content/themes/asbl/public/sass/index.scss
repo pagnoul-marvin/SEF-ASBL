@@ -352,7 +352,7 @@ body {
 
           li {
             border-bottom: 1px solid $white_color;
-            padding-bottom: 2.1875em;
+            padding-bottom: 1.59em;
 
             a {
               font-size: $main_title_font_size;
@@ -742,6 +742,80 @@ body {
 
         nav.footer_nav, nav.contact_nav, nav.socials_nav, nav.partners_nav {
           display: unset;
+        }
+      }
+    }
+  }
+}
+
+@media (width >= 1200px) {
+  body {
+
+    h1 {
+      margin: 8.359375em 6.35em 0 6.35em;
+    }
+
+    header {
+      padding: 1.5625em 10em;
+      width: calc(100% - 20em);
+
+      .main_nav {
+        div {
+          transform: translateX(-10em);
+        }
+      }
+    }
+
+    main {
+      padding: 0 10em;
+    }
+
+    footer {
+
+      div.flex_container {
+        padding: $medium_padding 10em;
+      }
+
+      section#legal_notices {
+        padding: 1.5625em 10em;
+      }
+    }
+  }
+}
+
+@media (width >= 2100px) {
+  body {
+    header {
+      .main_nav {
+        input[id="burger_menu"], label[for="burger_menu"] {
+          display: none;
+        }
+
+        div {
+          transform: unset;
+          position: initial;
+          top: unset;
+          visibility: visible;
+          background-color: unset;
+          width: unset;
+          height: unset;
+          overflow: unset;
+
+          ul.flex_container {
+            padding: unset;
+            flex-direction: row;
+            gap: 3.125em;
+
+            .main_nav_item {
+              padding-bottom: 0;
+              border-bottom: none;
+
+              &:not(:last-child) {
+                border-right: 1px solid $white_color;
+                padding-right: 1.59em;
+              }
+            }
+          }
         }
       }
     }
