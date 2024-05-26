@@ -12,7 +12,7 @@ get_header();
 
         <?php component('linked_section.section', [
             'field_name' => 'phone_contact',
-            'page' => ''
+            'page' => '',
         ]); ?>
 
     </section>

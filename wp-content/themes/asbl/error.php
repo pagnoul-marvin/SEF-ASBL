@@ -11,7 +11,7 @@ get_header()
 
             <h2><?= get_field('error_title')?></h2>
             <p class="text"><?= get_field('error_text')?></p>
-            <a class="section_link_hover" href="<?= get_field('error_link')?>" title="Appeler le +32 85 21 57 52" ><?= get_field('error_link')?></a>
+            <a class="section_link_hover" href="tel:<?= get_field('error_link')?>" title="Appeler le +32 85 21 57 52" ><?= get_field('error_link')?></a>
 
         </section>
 

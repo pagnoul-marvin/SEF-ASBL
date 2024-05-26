@@ -27,7 +27,7 @@
 <?php } else { ?>
 
     <a class="section_link" title="Appeler le numéro &laquo;<?= get_field($field_name.'_link') ?>&raquo;"
-       href="<?= get_field($field_name . '_link') ?>"><?= get_field($field_name . '_link'); ?></a>
+       href="tel:<?= get_field($field_name . '_link') ?>"><?= get_field($field_name . '_link'); ?></a>
 
     <p class="section_link_hover"><?= esc_html(get_field($field_name . '_link')); ?></p>
 

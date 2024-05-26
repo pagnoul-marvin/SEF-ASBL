@@ -15,7 +15,7 @@ class CantReadFileException extends Exception
 
     #[NoReturn] public static function redirect(): void
     {
-        wp_redirect(home_url().'/une-erreur-est-survenue');
+        wp_redirect(home_url().'/une-erreur-est-survenue/');
         exit();
     }
 }
