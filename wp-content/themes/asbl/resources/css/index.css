@@ -18,6 +18,14 @@
   margin-bottom: 6.07em;
 }
 
+#validate {
+  background-color: #24702a;
+}
+
+#not_validate {
+  background-color: #702424;
+}
+
 #last_modification {
   background-color: #3E38AD;
   padding: 3.57em 1.14em;
@@ -41,7 +49,7 @@
 }
 
 .validation_errors {
-  color: #702424;
+  color: #ff0000;
   font-family: "Helvetica-Bold", "Arial-Bold", "Roboto-Bold", sans-serif;
   margin-top: 1.14em;
 }
@@ -55,6 +63,10 @@
 
 .spacing {
   margin-top: 3.125em;
+}
+
+.translated {
+  transform: translateX(10000px);
 }
 
 .link_hover, .section_link_hover {
@@ -333,6 +345,16 @@ body header .main_nav input[type=checkbox]:checked ~ label[for=burger_menu] span
 body header .main_nav input[type=checkbox]:checked ~ label[for=burger_menu] span.line:after {
   transform: rotate(45deg);
 }
+body main section #validate, body main section #not_validate {
+  border-radius: 3.75em 0;
+  padding: 3.57em 1.14em;
+  font-size: 1.14em;
+  position: fixed;
+  top: 11.5em;
+  right: 4.4em;
+  z-index: 1;
+  transition: transform 1s ease-in-out;
+}
 body main section .houses, body main section .shops {
   margin: 1.875em 1em 0 1em;
 }
@@ -417,6 +439,7 @@ body main section form#contact_form fieldset input::placeholder, body main secti
   color: rgba(255, 255, 255, 0.5);
 }
 body main section form#contact_form input[type=submit], body main section form#support_form input[type=submit] {
+  cursor: pointer;
   background-color: transparent;
   line-height: 1.42em;
   color: #fff;

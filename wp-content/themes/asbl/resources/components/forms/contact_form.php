@@ -8,6 +8,16 @@
 /** @var $second_field_name */
 /** @var $third_field_name */
 /** @var $amount_field_name */
+require BASE_PATH . '../../../vendor/autoload.php';
+
+use Core\Database;
+
+try {
+    $db = new Database(BASE_PATH . '.env.local.ini');
+    $errors = $db->getErrors();
+} catch (PDOException) {
+    echo 'fail';
+}
 ?>
 
 <form id="<?= $form_id ?>" action="<?= $form_action ?>" method="POST">
@@ -21,10 +31,14 @@
             <?php component('forms.labels_and_input.text_type', [
                 'field_name' => $first_field_name,
                 'second_field_name' => $second_field_name,
-                'input_id' => 'lastname',
+                'input_id' => 'firstname',
                 'required' => true,
                 'label_class' => 'label_positioning'
             ]) ?>
+
+            <?php if (isset($errors['firstname'])) { ?>
+                <p class="validation_errors"><?= $errors['firstname'] ?></p>
+            <?php } ?>
 
         </div>
 
@@ -33,10 +47,14 @@
             <?php component('forms.labels_and_input.text_type', [
                 'field_name' => $first_field_name,
                 'second_field_name' => $third_field_name,
-                'input_id' => 'firstname',
+                'input_id' => 'lastname',
                 'required' => true,
                 'label_class' => 'label_positioning'
             ]) ?>
+
+            <?php if (isset($errors['lastname'])) { ?>
+                <p class="validation_errors"><?= $errors['lastname'] ?></p>
+            <?php } ?>
 
         </div>
 
@@ -48,6 +66,10 @@
                 'required' => true,
                 'label_class' => 'label_positioning'
             ]) ?>
+
+            <?php if (isset($errors['email'])) { ?>
+                <p class="validation_errors"><?= $errors['email'] ?></p>
+            <?php } ?>
 
         </div>
 
@@ -88,12 +110,28 @@
                 'label_class' => 'label_positioning'
             ]) ?>
 
+            <?php if (isset($errors['message'])) { ?>
+                <p class="validation_errors"><?= $errors['message'] ?></p>
+            <?php } ?>
+
         </div>
 
     </fieldset>
 
-    <p class="note text"><?= get_field($first_field_name.'_note') ?></p>
+    <p class="note text"><?= get_field($first_field_name . '_note') ?></p>
 
     <?php component('forms.labels_and_input.submit_type') ?>
 
 </form>
+
+<?php if ($_SERVER["REQUEST_METHOD"] == "POST" && empty($errors)) { ?>
+    <div id="validate">
+        <p>Votre mail a bien &eacute;t&eacute; envoy&eacute;&nbsp;! Nous vous recontacterons dans le plus bref
+            d&eacute;lais.</p>
+    </div>
+<?php } elseif ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($errors)) { ?>
+    <div id="not_validate">
+        <p>Votre mail n&rsquo;a pas &eacute;t&eacute; envoy&eacute;&nbsp;! Un ou plusieurs champ(s) ne
+            respecte(nt) pas les r&egrave;gles.</p>
+    </div>
+<?php } ?>

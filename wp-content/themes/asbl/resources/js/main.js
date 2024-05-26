@@ -8,6 +8,7 @@ const sef = {
 
     init() {
         this.addEventListeners();
+        this.formDivElementsDisappearAfter7seconds();
         this.noJs();
     },
 
@@ -50,6 +51,18 @@ const sef = {
         }
 
         settings.sliderElement.style.left = `${this.pourcentage}%`;
+    },
+
+    formDivElementsDisappearAfter7seconds() {
+        setTimeout(function () {
+
+            if (settings.validateDiv) {
+                settings.validateDiv.classList.add(settings.translatedClass);
+            }
+            if (settings.notValidateDiv) {
+                settings.notValidateDiv.classList.add(settings.translatedClass);
+            }
+        }, settings.timeBeforeDivElementsDisappear);
     }
 }
 

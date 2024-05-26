@@ -2,18 +2,6 @@
 /*
 Template Name: Contact us
 */
-
-require BASE_PATH . '../../../vendor/autoload.php';
-
-use Core\Database;
-
-try {
-    $db = new Database(BASE_PATH . '.env.local.ini');
-    $errors = $db->getErrors();
-} catch (PDOException) {
-    echo 'fail';
-}
-
 get_header();
 
 ?>

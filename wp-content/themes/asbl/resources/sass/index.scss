@@ -13,13 +13,22 @@
 #error {
   padding: 3.125em 1em;
   background: linear-gradient(to bottom, $light_blue_color 65%, $dark_blue_color 35%);
+
   h2 {
     margin-bottom: 1.7em;
   }
 
-  p{
+  p {
     margin-bottom: 6.07em;
   }
+}
+
+#validate {
+  background-color: $validate_color;
+}
+
+#not_validate {
+  background-color: $error_color;
 }
 
 #last_modification {
@@ -35,8 +44,9 @@
   padding: 3.125em 1em;
   margin-left: 5em;
   margin-right: 5em;
+
   h2 {
-      margin-bottom: 1.7em;
+    margin-bottom: 1.7em;
   }
 }
 
@@ -45,7 +55,7 @@
 }
 
 .validation_errors {
-  color: $error_color;
+  color: $form_error_color;
   font-family: 'Helvetica-Bold', 'Arial-Bold', 'Roboto-Bold', sans-serif;
   margin-top: 1.14em;
 }
@@ -59,6 +69,10 @@
 
 .spacing {
   margin-top: 3.125em;
+}
+
+.translated {
+  transform: translateX(10000px);
 }
 
 .link_hover, .section_link_hover {
@@ -378,6 +392,18 @@ body {
 
   main {
     section {
+
+      #validate, #not_validate {
+        border-radius: $section_border_radius 0;
+        padding: 3.57em 1.14em;
+        font-size: 1.14em;
+        position: fixed;
+        top: 11.5em;
+        right: 4.4em;
+        z-index: 1;
+        transition: transform 1s ease-in-out;
+      }
+
       .houses, .shops {
         margin: 1.875em 1em 0 1em;
 
@@ -490,6 +516,7 @@ body {
           }
 
           input[type="submit"] {
+            cursor: pointer;
             background-color: transparent;
             line-height: 1.42em;
             color: $white_color;

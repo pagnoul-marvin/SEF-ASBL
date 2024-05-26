@@ -6,6 +6,8 @@ export const settings = {
     buttonElements: document.querySelectorAll('button'),
     sliderElement: document.querySelector('#slideshow #slideshow_content'),
     noJsBannerElement: document.getElementById('no_js_banner'),
+    validateDiv: document.getElementById('validate'),
+    notValidateDiv: document.getElementById('not_validate'),
 
 
     //IDs
@@ -17,11 +19,13 @@ export const settings = {
     //CLASSES
 
     noDisplayClass: 'no_display',
+    translatedClass: 'translated',
 
 
     //NUMBERS
 
     multiplicationScrolled: 100,
     leftPourcentage: 100,
+    timeBeforeDivElementsDisappear: 7000,
 
 }

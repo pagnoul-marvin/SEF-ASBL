@@ -35,36 +35,7 @@ class Database extends PDO
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-            if (!Validator::validateEmail('email')) {
-                $this->errors['email'] = 'L\'adresse email n\'est pas valide';
-            }
-
-            if (!Validator::emailContainsAtSymbol('email')) {
-                $this->errors['email'] = 'Le caractère @ est requis';
-            }
-
-            if (!Validator::min('firstname', 3)) {
-                $this->errors['firstname'] = 'Le prénom doit contenir au minimum 3 caractères.';
-            }
-
-            if (!Validator::min('lastname', 3)) {
-                $this->errors['lastname'] = 'Le nom doit contenir au minimum 3 caractères.';
-            }
-
-            if (!Validator::no_numbers('firstname')) {
-                $this->errors['firstname'] = 'Le prénom ne doit pas contenir de chiffre.';
-            }
-
-            if (!Validator::no_numbers('lastname')) {
-                $this->errors['lastname'] = 'Le nom ne doit pas contenir de chiffre.';
-            }
-
-            $this->requiredFields = ['firstname', 'lastname', 'mail', 'message'];
-            foreach ($this->requiredFields as $field) {
-                if (!Validator::required($field)) {
-                    $this->errors[$field] = ucfirst($field) . ' est requis.';
-                }
-            }
+            $this->checkErrors();
 
             if (empty($this->errors)) {
 
@@ -78,14 +49,9 @@ class Database extends PDO
                     $email = htmlspecialchars($_POST['email']);
                     $message = htmlspecialchars($_POST['message']);
 
-                    $sql = "INSERT INTO `wp_contact_form_entries` (`firstname`, `lastname`, `email`, `message`) VALUES (:firstname, :lastname, :email, :message)";
-                    $stmt = $this->conn->prepare($sql);
+                    $this->sendUserEntriesInDB($firstname, $lastname, $email, $message);
 
-                    $stmt->bindParam(':firstname', $firstname);
-                    $stmt->bindParam(':lastname', $lastname);
-                    $stmt->bindParam(':email', $email);
-                    $stmt->bindParam(':message', $message);
-                    $stmt->execute();
+                    $this->SendEmail($firstname, $lastname, $email, $message);
 
                 } catch (PDOException $e) {
                     exit('Une erreur est survenue');
@@ -97,5 +63,66 @@ class Database extends PDO
     public function getErrors(): array
     {
         return $this->errors;
+    }
+
+    private function checkErrors(): void
+    {
+        if (!Validator::validateEmail($_POST['email'])) {
+            $this->errors['email'] = 'L\'adresse email n\'est pas valide';
+        }
+
+        if (!Validator::emailContainsAtSymbol($_REQUEST['email'])) {
+            $this->errors['email'] = 'Le caractère @ est requis';
+        }
+
+        if (!Validator::min('firstname', 3)) {
+            $this->errors['firstname'] = 'Le prénom doit contenir au minimum 3 caractères.';
+        }
+
+        if (!Validator::min('lastname', 3)) {
+            $this->errors['lastname'] = 'Le nom doit contenir au minimum 3 caractères.';
+        }
+
+        if (!Validator::no_numbers('firstname')) {
+            $this->errors['firstname'] = 'Le prénom ne doit pas contenir de chiffre.';
+        }
+
+        if (!Validator::no_numbers('lastname')) {
+            $this->errors['lastname'] = 'Le nom ne doit pas contenir de chiffre.';
+        }
+
+        $this->requiredFields = ['firstname', 'lastname', 'email', 'message'];
+        foreach ($this->requiredFields as $field) {
+            if (!Validator::required($field)) {
+                $this->errors[$field] = ucfirst($field) . ' est requis.';
+            }
+        }
+    }
+
+    private function sendUserEntriesInDB($firstname, $lastname, $email, $message): void
+    {
+        $sql = "INSERT INTO `wp_contact_form_entries` (`firstname`, `lastname`, `email`, `message`) VALUES (:firstname, :lastname, :email, :message)";
+        $stmt = $this->conn->prepare($sql);
+
+        $stmt->bindParam(':firstname', $firstname);
+        $stmt->bindParam(':lastname', $lastname);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':message', $message);
+        $stmt->execute();
+    }
+
+    private function SendEmail($firstname, $lastname, $email, $message): void
+    {
+        $message = htmlspecialchars_decode($message);
+        $to = "marvinpagnoul@icloud.com";
+        $subject = "Nouveau formulaire de contact soumis";
+        $body = "Un nouveau formulaire de contact a été soumis avec les informations suivantes:".PHP_EOL;
+        $body .= "Prénom: $firstname".PHP_EOL;
+        $body .= "Nom: $lastname".PHP_EOL;
+        $body .= "E-mail: $email".PHP_EOL;
+        $body .= "Sujet: $message".PHP_EOL;
+        $headers = "From: $email\r".PHP_EOL;
+        $headers .= "Reply-To: $email\r".PHP_EOL;
+        wp_mail($to, $subject, $body, $headers);
     }
 }
