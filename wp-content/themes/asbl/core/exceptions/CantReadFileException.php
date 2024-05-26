@@ -5,8 +5,9 @@ namespace Core\Exceptions;
 use Exception;
 use JetBrains\PhpStorm\NoReturn;
 
-class FileNotFoundException extends Exception
+class CantReadFileException extends Exception
 {
+
     public function __construct()
     {
         parent::__construct();

@@ -10,12 +10,15 @@
 /** @var $amount_field_name */
 require BASE_PATH . '../../../vendor/autoload.php';
 
+use App\Models\ContactFormEntries;
 use Core\Database;
 
 try {
     $db = new Database(BASE_PATH . '.env.local.ini');
-    $errors = $db->getErrors();
-} catch (PDOException) {
+    $form = new ContactFormEntries($db);
+    $form->save();
+    $errors = $form->getErrors();
+} catch (PDOException $e) {
     echo 'fail';
 }
 ?>
