@@ -396,7 +396,7 @@ body main section form {
   padding: 0 1em;
   margin-top: 1.875em;
 }
-body main section form#contact_form label.label_positioning {
+body main section form#contact_form label.label_positioning, body main section form#blog_form label.label_positioning {
   background-color: #27236F;
 }
 body main section form#support_form label.label_positioning {
@@ -405,28 +405,28 @@ body main section form#support_form label.label_positioning {
 body main section form#support_form fieldset:nth-of-type(2) {
   margin-bottom: 3.125em;
 }
-body main section form#contact_form fieldset, body main section form#support_form fieldset {
+body main section form#contact_form fieldset, body main section form#support_form fieldset, body main section form#blog_form fieldset {
   gap: 2.5em;
 }
-body main section form#contact_form fieldset:first-of-type, body main section form#support_form fieldset:first-of-type {
+body main section form#contact_form fieldset:first-of-type, body main section form#support_form fieldset:first-of-type, body main section form#blog_form fieldset:first-of-type {
   margin-bottom: 3.125em;
 }
-body main section form#contact_form fieldset legend, body main section form#support_form fieldset legend {
+body main section form#contact_form fieldset legend, body main section form#support_form fieldset legend, body main section form#blog_form fieldset legend {
   font-family: "Helvetica-Bold", "Arial-Bold", "Roboto-Bold", sans-serif;
   font-weight: bold;
   font-size: 1.57em;
   margin-bottom: 1.4em;
 }
-body main section form#contact_form fieldset div, body main section form#support_form fieldset div {
+body main section form#contact_form fieldset div, body main section form#support_form fieldset div, body main section form#blog_form fieldset div {
   position: relative;
 }
-body main section form#contact_form fieldset div label.label_positioning, body main section form#support_form fieldset div label.label_positioning {
+body main section form#contact_form fieldset div label.label_positioning, body main section form#support_form fieldset div label.label_positioning, body main section form#blog_form fieldset div label.label_positioning {
   position: absolute;
   left: 1.14em;
   top: -0.5em;
   padding: 0 0.5em;
 }
-body main section form#contact_form fieldset input, body main section form#contact_form fieldset textarea, body main section form#support_form fieldset input, body main section form#support_form fieldset textarea {
+body main section form#contact_form fieldset input, body main section form#contact_form fieldset textarea, body main section form#support_form fieldset input, body main section form#support_form fieldset textarea, body main section form#blog_form fieldset input, body main section form#blog_form fieldset textarea {
   border: 1px solid #fff;
   border-radius: 0.714em;
   padding: 1.14em;
@@ -435,10 +435,10 @@ body main section form#contact_form fieldset input, body main section form#conta
   color: #fff;
   line-height: 1.42em;
 }
-body main section form#contact_form fieldset input::placeholder, body main section form#contact_form fieldset textarea::placeholder, body main section form#support_form fieldset input::placeholder, body main section form#support_form fieldset textarea::placeholder {
+body main section form#contact_form fieldset input::placeholder, body main section form#contact_form fieldset textarea::placeholder, body main section form#support_form fieldset input::placeholder, body main section form#support_form fieldset textarea::placeholder, body main section form#blog_form fieldset input::placeholder, body main section form#blog_form fieldset textarea::placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
-body main section form#contact_form input[type=submit], body main section form#support_form input[type=submit] {
+body main section form#contact_form input[type=submit], body main section form#support_form input[type=submit], body main section form#blog_form input[type=submit] {
   cursor: pointer;
   background-color: transparent;
   line-height: 1.42em;
@@ -496,6 +496,35 @@ body main section#slider .flex_container button {
   border: 1px solid #fff;
   padding: 1.14em;
   cursor: pointer;
+}
+body main section#blog {
+  padding: 3.125em 1em;
+}
+body main section#blog .blog_title {
+  margin-bottom: 2.3em;
+  font-size: 1.57em;
+}
+body main section#blog .blog_article {
+  background-color: #3E38AD;
+  border-radius: 3.75em 0;
+  padding: 3.125em 1em;
+}
+body main section#blog .blog_article:not(:last-child) {
+  margin-bottom: 2.3em;
+}
+body main section#blog .blog_article_name {
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: "Helvetica-Bold", "Arial-Bold", "Roboto-Bold", sans-serif;
+  border-right: 1px solid #fff;
+  padding-right: 1.14em;
+  margin-right: 1em;
+}
+body main section#blog .blog_article_time {
+  font-style: italic;
+}
+body main section#blog .blog_article_message {
+  margin-top: 3em;
 }
 body footer {
   background-color: #3E38AD;
@@ -587,7 +616,9 @@ body footer section#legal_notices a {
     margin-top: 3em;
   }
   body main section#slider #slideshow {
-    height: 50em;
+    height: 40em;
+    width: 40em;
+    margin-left: calc(50% - 20em);
   }
   body footer div.flex_container {
     flex-direction: row;

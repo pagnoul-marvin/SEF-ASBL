@@ -458,7 +458,7 @@ body {
         padding: 0 $base_padding;
         margin-top: 1.875em;
 
-        &#contact_form {
+        &#contact_form, &#blog_form {
           label.label_positioning {
             background-color: $dark_blue_color;
           }
@@ -474,7 +474,7 @@ body {
           }
         }
 
-        &#contact_form, &#support_form {
+        &#contact_form, &#support_form, &#blog_form {
           fieldset {
             gap: 2.5em;
 
@@ -583,7 +583,41 @@ body {
             cursor: pointer;
           }
         }
+      }
 
+      &#blog {
+        padding: 3.125em 1em;
+
+        .blog_title {
+          margin-bottom: 2.3em;
+          font-size: $main_title_font_size;
+        }
+
+        .blog_article {
+          background-color: $light_blue_color;
+          border-radius: $section_border_radius 0;
+          padding: 3.125em 1em;
+          &:not(:last-child) {
+            margin-bottom: 2.3em;
+          }
+
+          &_name {
+            display: inline-block;
+            text-transform: uppercase;
+            font-family: 'Helvetica-Bold', 'Arial-Bold', 'Roboto-Bold', sans-serif;
+            border-right: 1px solid $white_color;
+            padding-right: 1.14em;
+            margin-right: 1em;
+          }
+
+          &_time {
+            font-style: italic;
+          }
+
+          &_message {
+            margin-top: 3em;
+          }
+        }
       }
     }
   }
@@ -729,7 +763,9 @@ body {
       section {
         &#slider {
           #slideshow {
-            height: 50em;
+            height: 40em;
+            width: 40em;
+            margin-left: calc(50% - 20em);
           }
         }
       }
