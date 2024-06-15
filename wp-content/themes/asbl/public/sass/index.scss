@@ -711,6 +711,24 @@ body {
   }
 }
 
+@media (width >= 615px) {
+  body {
+    main {
+      section {
+         form {
+           &#blog_form, &#contact_form, &#support_form {
+             fieldset {
+               input, textarea {
+                 padding: 1.14em;
+               }
+             }
+           }
+         }
+      }
+    }
+  }
+}
+
 
 @media (width >= 700px) {
   body {

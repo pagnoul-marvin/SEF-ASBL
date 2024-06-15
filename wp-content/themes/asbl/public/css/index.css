@@ -588,6 +588,11 @@ body footer section#legal_notices a {
   font-weight: normal;
 }
 
+@media (width >= 615px) {
+  body main section form#blog_form fieldset input, body main section form#blog_form fieldset textarea, body main section form#contact_form fieldset input, body main section form#contact_form fieldset textarea, body main section form#support_form fieldset input, body main section form#support_form fieldset textarea {
+    padding: 1.14em;
+  }
+}
 @media (width >= 700px) {
   body h1 {
     margin: 8.359375em 3.2em 0 3.2em;
