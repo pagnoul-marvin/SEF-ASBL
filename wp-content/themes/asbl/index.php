@@ -8,7 +8,9 @@ use Core\Database;
 try {
     $db = new Database(BASE_PATH . '.env.local.ini');
     $blog_form = new BlogEntries($db);
+    $blog_form->save();
     $blog_messages = $blog_form->getBlogMessage();
+    $blog_errors = $blog_form->getErrors();
 } catch (PDOException $e) {
     echo 'fail';
 }
@@ -86,9 +88,9 @@ try {
 
         <h2 class="blog_title"><?= get_field('fb_title') ?></h2>
 
-        <?php if(isset($blog_messages)): ?>
+        <?php if (isset($blog_messages)): ?>
 
-            <?php foreach ($blog_messages as $message):  ?>
+            <?php foreach ($blog_messages as $message): ?>
 
                 <article class="blog_article">
 
@@ -96,7 +98,8 @@ try {
 
                     <p class="blog_article_name"><?= $message['firstname'] ?> <?= $message['lastname'] ?></p>
 
-                    <time datetime="<?= date('j F Y', strtotime($message['created_at'])) ?>" class="blog_article_time"><?= date('j F Y', strtotime($message['created_at'])) ?></time>
+                    <time datetime="<?= date('j F Y', strtotime($message['created_at'])) ?>"
+                          class="blog_article_time"><?= date('j F Y', strtotime($message['created_at'])) ?></time>
 
                     <p class="blog_article_message"><?= $message['message'] ?></p>
 
@@ -106,7 +109,7 @@ try {
 
         <?php else: ?>
 
-        <p>Aucun message n&rsquo;a &eacute;t&eacute; publi&eacute;</p>
+            <p>Aucun message n&rsquo;a &eacute;t&eacute; publi&eacute;</p>
 
         <?php endif; ?>
 
@@ -114,7 +117,7 @@ try {
             <p>Les champs dot&eacute;s d&rsquo;une &laquo;&ast;&raquo; sont obligatoires.</p>
         </div>
 
-        <form action="" method="post" id="blog_form">
+        <form action="<?= home_url() ?>" method="post" id="blog_form">
 
             <fieldset class="flex_container">
 
@@ -122,19 +125,30 @@ try {
 
                 <div>
 
-                    <label class="label_positioning" for="firstname"><?= get_field('fb_firstname_label') ?></label>
+                    <label class="label_positioning" for="firstname"><?= get_field('fb_firstname_label') ?> <small
+                                class="small">Le pr&eacute;nom doit au minimum contenir 3 caract&egrave;res, au plus
+                            255 et ne peut pas contenir de chiffres.</small></label>
 
                     <input placeholder="<?= get_field('fb_firstname_label_placeholder') ?>" type="text" name="firstname"
                            id="firstname" required>
+
+                    <?php if (isset($blog_errors['firstname'])) { ?>
+                        <p class="validation_errors"><?= $blog_errors['firstname'] ?></p>
+                    <?php } ?>
 
                 </div>
 
                 <div>
 
-                    <label class="label_positioning" for="lastname"><?= get_field('fb_lastname_label') ?></label>
+                    <label class="label_positioning" for="lastname"><?= get_field('fb_lastname_label') ?> <small
+                                class="small">Le nom doit au minimum contenir 3 caract&egrave;res, au plus 255 et ne peut pas contenir de chiffres.</small></label>
 
                     <input placeholder="<?= get_field('fb_lastname_label_placeholder') ?>" type="text" name="lastname"
                            id="lastname" required>
+
+                    <?php if (isset($blog_errors['lastname'])) { ?>
+                        <p class="validation_errors"><?= $blog_errors['lastname'] ?></p>
+                    <?php } ?>
 
                 </div>
 
@@ -146,16 +160,35 @@ try {
 
                 <div>
 
-                    <label class="label_positioning" for="message"><?= get_field('fb_message_textarea') ?></label>
+                    <label class="label_positioning" for="message"><?= get_field('fb_message_textarea') ?> <small
+                                class="small">Le message doit au minimum contenir 3 caract&egrave;res, au plus
+                            500.</small></label>
 
                     <textarea placeholder="<?= get_field('fb_message_textarea_placeholder') ?>"
                               name="message" id="message" rows="10" required></textarea>
+
+                    <?php if (isset($blog_errors['message'])) { ?>
+                        <p class="validation_errors"><?= $blog_errors['message'] ?></p>
+                    <?php } ?>
 
                 </div>
 
             </fieldset>
 
+            <?php component('forms.labels_and_input.submit_type'); ?>
+
         </form>
+
+        <?php if ($_SERVER["REQUEST_METHOD"] == "POST" && empty($blog_errors)) { ?>
+            <div id="validate">
+                <p>Votre message a bien &eacute;t&eacute; envoy&eacute;&nbsp;! Nous vous remercions pour votre message&nbsp;!</p>
+            </div>
+        <?php } elseif ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($blog_errors)) { ?>
+            <div id="not_validate">
+                <p>Votre message n&rsquo;a pas &eacute;t&eacute; envoy&eacute;&nbsp;! Un ou plusieurs champ(s) ne
+                    respecte(nt) pas les r&egrave;gles.</p>
+            </div>
+        <?php } ?>
 
     </section>
 

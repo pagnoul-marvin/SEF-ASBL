@@ -21,6 +21,13 @@ class Validator
         }
         return true;
     }
+    public static function max(string $key, int $value): bool
+    {
+        if (mb_strlen($_REQUEST[$key]) > $value) {
+            return false;
+        }
+        return true;
+    }
 
     public static function required(string $key): bool
     {

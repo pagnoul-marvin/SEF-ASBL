@@ -32,8 +32,16 @@ class ContactFormEntries extends Database
             $this->errors['firstname'] = 'Le prénom doit contenir au minimum 3 caractères.';
         }
 
+        if (!Validator::max('firstname', 255)) {
+            $this->errors['firstname'] = 'Le prénom ne doit pas dépasser les 255 caractères.';
+        }
+
         if (!Validator::min('lastname', 3)) {
             $this->errors['lastname'] = 'Le nom doit contenir au minimum 3 caractères.';
+        }
+
+        if (!Validator::max('lastname', 255)) {
+            $this->errors['lastname'] = 'Le nom ne doit pas dépasser les 255 caractères.';
         }
 
         if (!Validator::no_numbers('firstname')) {
@@ -42,6 +50,14 @@ class ContactFormEntries extends Database
 
         if (!Validator::no_numbers('lastname')) {
             $this->errors['lastname'] = 'Le nom ne doit pas contenir de chiffre.';
+        }
+
+        if (!Validator::min('message', 3)) {
+            $this->errors['message'] = 'Le message doit contenir au minimum 3 caractères';
+        }
+
+        if (!Validator::max('message', 500)) {
+            $this->errors['message'] = 'Le message ne doit pas dépasser les 500 caractères';
         }
 
         foreach ($this->requiredFields as $field) {

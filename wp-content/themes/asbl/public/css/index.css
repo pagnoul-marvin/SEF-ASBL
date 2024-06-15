@@ -7,6 +7,11 @@
   border-radius: 0.15em;
 }
 
+.small {
+  font-size: 0.75em;
+  line-height: 1.7em;
+}
+
 #error {
   padding: 3.125em 1em;
   background: linear-gradient(to bottom, #3E38AD 65%, #27236F 35%);
@@ -347,11 +352,13 @@ body header .main_nav input[type=checkbox]:checked ~ label[for=burger_menu] span
 }
 body main section #validate, body main section #not_validate {
   border-radius: 3.75em 0;
+  line-height: 1.43em;
   padding: 3.57em 1.14em;
   font-size: 1.14em;
   position: fixed;
   top: 11.5em;
-  right: 4.4em;
+  right: 0;
+  width: calc(100% - 2.28em);
   z-index: 1;
   transition: transform 1s ease-in-out;
 }
@@ -429,7 +436,7 @@ body main section form#contact_form fieldset div label.label_positioning, body m
 body main section form#contact_form fieldset input, body main section form#contact_form fieldset textarea, body main section form#support_form fieldset input, body main section form#support_form fieldset textarea, body main section form#blog_form fieldset input, body main section form#blog_form fieldset textarea {
   border: 1px solid #fff;
   border-radius: 0.714em;
-  padding: 1.14em;
+  padding: 3em 1.14em 1.14em 1.14em;
   background-color: transparent;
   width: calc(100% - 2.29em - 2px);
   color: #fff;
@@ -440,7 +447,7 @@ body main section form#contact_form fieldset input::placeholder, body main secti
 }
 body main section form#contact_form input[type=submit], body main section form#support_form input[type=submit], body main section form#blog_form input[type=submit] {
   cursor: pointer;
-  background-color: transparent;
+  background-color: #3E38AD;
   line-height: 1.42em;
   color: #fff;
   border: 1px solid #fff;
@@ -488,17 +495,28 @@ body main section#slider #slideshow_content li img {
 body main section#slider .flex_container {
   flex-direction: row;
   margin-top: 2.14em;
+  padding: 0 calc(50% - 20em);
+  gap: 2em;
 }
 body main section#slider .flex_container button {
   border-radius: 0.714em;
-  flex-basis: calc(50% - 1em);
   background-color: transparent;
+  flex-grow: 1;
   border: 1px solid #fff;
   padding: 1.14em;
   cursor: pointer;
 }
 body main section#blog {
   padding: 3.125em 1em;
+}
+body main section#blog form#blog_form {
+  padding: 0;
+}
+body main section#blog form#blog_form input, body main section#blog form#blog_form textarea {
+  width: 100%;
+}
+body main section#blog div.center {
+  padding: 0;
 }
 body main section#blog .blog_title {
   margin-bottom: 2.3em;
@@ -525,6 +543,7 @@ body main section#blog .blog_article_time {
 }
 body main section#blog .blog_article_message {
   margin-top: 3em;
+  line-height: 1.43em;
 }
 body footer {
   background-color: #3E38AD;
@@ -586,6 +605,15 @@ body footer section#legal_notices a {
   body main {
     padding: 0 5em;
   }
+  body main section#slider #slideshow {
+    height: 40em;
+    width: 40em;
+    margin-left: calc(50% - 20em);
+  }
+  body main section #validate, body main section #not_validate {
+    width: calc(100% - 11.1em);
+    right: 4.4em;
+  }
   body footer div.flex_container {
     padding: 1.5625em 5em;
   }
@@ -600,6 +628,10 @@ body footer section#legal_notices a {
   }
 }
 @media (width >= 1000px) {
+  body main section #validate, body main section #not_validate {
+    width: calc(100% - 19.9em);
+    right: 8.8em;
+  }
   body main .even {
     background: linear-gradient(to bottom, #27236F 89%, #3E38AD 11%);
   }
@@ -614,11 +646,6 @@ body footer section#legal_notices a {
   }
   body main .center {
     margin-top: 3em;
-  }
-  body main section#slider #slideshow {
-    height: 40em;
-    width: 40em;
-    margin-left: calc(50% - 20em);
   }
   body footer div.flex_container {
     flex-direction: row;

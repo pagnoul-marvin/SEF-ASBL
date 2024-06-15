@@ -10,6 +10,11 @@
   border-radius: .15em;
 }
 
+.small {
+  font-size: $small_font_size;
+  line-height: 1.7em;
+}
+
 #error {
   padding: 3.125em 1em;
   background: linear-gradient(to bottom, $light_blue_color 65%, $dark_blue_color 35%);
@@ -395,11 +400,13 @@ body {
 
       #validate, #not_validate {
         border-radius: $section_border_radius 0;
+        line-height: 1.43em;
         padding: 3.57em 1.14em;
         font-size: 1.14em;
         position: fixed;
         top: 11.5em;
-        right: 4.4em;
+        right: 0;
+        width: calc(100% - 2.28em);
         z-index: 1;
         transition: transform 1s ease-in-out;
       }
@@ -503,7 +510,7 @@ body {
             input, textarea {
               border: 1px solid $white_color;
               border-radius: .714em;
-              padding: 1.14em;
+              padding: 3em 1.14em 1.14em 1.14em;
               background-color: transparent;
               width: calc(100% - 2.29em - 2px);
               color: $white_color;
@@ -517,7 +524,7 @@ body {
 
           input[type="submit"] {
             cursor: pointer;
-            background-color: transparent;
+            background-color: $light_blue_color;
             line-height: 1.42em;
             color: $white_color;
             border: 1px solid $white_color;
@@ -573,11 +580,13 @@ body {
         .flex_container {
           flex-direction: row;
           margin-top: 2.14em;
+          padding: 0 calc(100% / 2 - 20em);
+          gap: 2em;
 
           button {
             border-radius: .714em;
-            flex-basis: calc(50% - 1em);
             background-color: transparent;
+            flex-grow: 1;
             border: 1px solid $white_color;
             padding: 1.14em;
             cursor: pointer;
@@ -588,6 +597,18 @@ body {
       &#blog {
         padding: 3.125em 1em;
 
+        form#blog_form {
+          padding: 0;
+
+          input, textarea {
+            width: 100%;
+          }
+        }
+
+        div.center {
+          padding: 0;
+        }
+
         .blog_title {
           margin-bottom: 2.3em;
           font-size: $main_title_font_size;
@@ -597,6 +618,7 @@ body {
           background-color: $light_blue_color;
           border-radius: $section_border_radius 0;
           padding: 3.125em 1em;
+
           &:not(:last-child) {
             margin-bottom: 2.3em;
           }
@@ -616,6 +638,7 @@ body {
 
           &_message {
             margin-top: 3em;
+            line-height: 1.43em;
           }
         }
       }
@@ -713,6 +736,22 @@ body {
 
     main {
       padding: 0 5em;
+
+      section {
+        &#slider {
+          #slideshow {
+            height: 40em;
+            width: 40em;
+            margin-left: calc(50% - 20em);
+          }
+        }
+
+        #validate, #not_validate {
+          width: calc(100% - 11.1em);
+          right: 4.4em;
+        }
+
+      }
     }
 
     footer {
@@ -740,6 +779,13 @@ body {
   body {
 
     main {
+      section {
+        #validate, #not_validate {
+          width: calc(100% - 19.9em);
+          right: 8.8em;
+        }
+      }
+
       .even {
         background: linear-gradient(to bottom, $dark_blue_color 89%, $light_blue_color 11%);
       }
@@ -758,16 +804,6 @@ body {
 
       .center {
         margin-top: 3em;
-      }
-
-      section {
-        &#slider {
-          #slideshow {
-            height: 40em;
-            width: 40em;
-            margin-left: calc(50% - 20em);
-          }
-        }
       }
     }
 
