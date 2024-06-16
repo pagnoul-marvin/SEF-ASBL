@@ -412,20 +412,25 @@ body {
 
       &#map {
         line-height: 1.43em;
+
         ul {
           padding: 2.14em 1em 0 1em;
+
           li {
             &:not(:last-child) {
               margin-bottom: 2.14em;
               border-bottom: 1px solid $white_color;
               padding-bottom: 2.14em;
             }
-            &>div {
+
+            & > div {
               display: flex;
               gap: 2em;
+
               h3 {
                 text-align: left;
               }
+
               img {
                 width: 50%;
                 height: auto;
@@ -522,7 +527,7 @@ body {
           border: 1px solid $white_color;
           border-radius: 2.14em 0;
           padding: 1.75em 1.14em;
-          background-color: rgba(0,0,0,0.6);
+          background-color: rgba(0, 0, 0, 0.6);
 
           div:first-child {
             margin-bottom: 2.14em;
