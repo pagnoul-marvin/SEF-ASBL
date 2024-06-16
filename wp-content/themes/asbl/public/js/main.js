@@ -8,7 +8,7 @@ const sef = {
 
     init() {
         this.addEventListeners();
-        this.formDivElementsDisappearAfter7seconds();
+        this.formDivElementsDisappearAfter10seconds();
         this.noJs();
     },
 
@@ -53,7 +53,7 @@ const sef = {
         settings.sliderElement.style.left = `${this.pourcentage}%`;
     },
 
-    formDivElementsDisappearAfter7seconds() {
+    formDivElementsDisappearAfter10seconds() {
         setTimeout(function () {
 
             if (settings.validateDiv) {

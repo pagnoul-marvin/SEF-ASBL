@@ -4,6 +4,7 @@ require BASE_PATH . '../../../vendor/autoload.php';
 
 use App\Models\BlogEntries;
 use Core\Database;
+use Core\Response;
 
 try {
     $db = new Database(BASE_PATH . '.env.local.ini');
@@ -12,7 +13,7 @@ try {
     $blog_messages = $blog_form->getBlogMessage();
     $blog_errors = $blog_form->getErrors();
 } catch (PDOException $e) {
-    echo 'fail';
+    Response::redirect();
 }
 ?>
 

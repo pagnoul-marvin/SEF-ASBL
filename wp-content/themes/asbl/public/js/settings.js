@@ -26,6 +26,6 @@ export const settings = {
 
     multiplicationScrolled: 100,
     leftPourcentage: 100,
-    timeBeforeDivElementsDisappear: 7000,
+    timeBeforeDivElementsDisappear: 10000,
 
 }

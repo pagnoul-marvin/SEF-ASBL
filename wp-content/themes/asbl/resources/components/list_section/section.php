@@ -27,7 +27,7 @@
 
 <article class="<?= $article_class ?>">
 
-    <h3 class="hidden"><?= get_field($field_name . '_' . $second_field_name . '_title') ?></h3>
+    <h3 class="<?php echo ($field_name !== 'shops') ? 'hidden' : ''; ?>"><?= get_field($field_name . '_' . $second_field_name . '_title') ?></h3>
 
     <img class="<?= $article_class ?>_image <?= $image_class ?>"
          src="<?= get_field($field_name . '_' . $second_field_name . '_image')['url'] ?>"
@@ -85,7 +85,7 @@
 
 <article class="<?= $article_class ?>">
 
-    <h3 class="hidden"><?= get_field($field_name . '_' . $third_field_name . '_title') ?></h3>
+    <h3 class="<?php echo ($field_name !== 'shops') ? 'hidden' : ''; ?>"><?= get_field($field_name . '_' . $third_field_name . '_title') ?></h3>
 
     <img class="<?= $article_class ?>_image <?= $image_class ?>"
          src="<?= get_field($field_name . '_' . $third_field_name . '_image')['url'] ?>"
@@ -148,7 +148,7 @@
 
     <article class="<?= $article_class ?>">
 
-        <h3 class="hidden"><?= get_field($field_name . '_' . $fourth_field_name . '_title') ?></h3>
+        <h3 class="<?php echo ($field_name !== 'shops') ? 'hidden' : ''; ?>"><?= get_field($field_name . '_' . $fourth_field_name . '_title') ?></h3>
 
         <img class="<?= $article_class ?>_image <?= $image_class ?>"
              src="<?= get_field($field_name . '_' . $fourth_field_name . '_image')['url'] ?>"

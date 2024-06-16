@@ -15,6 +15,11 @@
   line-height: 1.7em;
 }
 
+#check_disponibility {
+  color: white;
+  text-decoration: underline;
+}
+
 #error {
   padding: 3.125em 1em;
   background: linear-gradient(to bottom, $light_blue_color 65%, $dark_blue_color 35%);
@@ -119,6 +124,13 @@ img {
   object-fit: cover;
   width: 100%;
   border-radius: $section_border_radius 0;
+}
+
+h3 {
+  font-family: 'Helvetica-Bold', 'Arial-Bold', 'Roboto-Bold', sans-serif;
+  font-size: $main_title_font_size;
+  margin-bottom: 1em;
+  text-align: center;
 }
 
 .filter {
@@ -398,6 +410,59 @@ body {
   main {
     section {
 
+      &#map {
+        line-height: 1.43em;
+        ul {
+          padding: 2.14em 1em 0 1em;
+          li {
+            &:not(:last-child) {
+              margin-bottom: 2.14em;
+              border-bottom: 1px solid $white_color;
+              padding-bottom: 2.14em;
+            }
+            &>div {
+              display: flex;
+              gap: 2em;
+              h3 {
+                text-align: left;
+              }
+              img {
+                width: 50%;
+                height: auto;
+              }
+            }
+          }
+        }
+      }
+
+      &#financial {
+        div {
+          line-height: 1.43em;
+          padding: 0 $base_padding;
+
+          p:first-of-type {
+            margin-top: 2.14em;
+          }
+
+          p:not(:last-child) {
+            margin-bottom: 1.14em;
+          }
+
+          ul {
+            margin-bottom: 2.14em;
+
+            li {
+              &:first-of-type {
+                margin-bottom: 1.14em;
+              }
+
+              list-style: inside;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+
       #validate, #not_validate {
         border-radius: $section_border_radius 0;
         line-height: 1.43em;
@@ -451,9 +516,13 @@ body {
 
         &_positioning {
           position: absolute;
-          left: calc(50% - 8.29em);
-          top: 3.43em;
+          left: calc(50% - 8.71em);
+          top: calc(50% - 12.5em);
           z-index: 1;
+          border: 1px solid $white_color;
+          border-radius: 2.14em 0;
+          padding: 1.75em 1.14em;
+          background-color: rgba(0,0,0,0.6);
 
           div:first-child {
             margin-bottom: 2.14em;
@@ -465,17 +534,13 @@ body {
         padding: 0 $base_padding;
         margin-top: 1.875em;
 
-        &#contact_form, &#blog_form {
+        &#contact_form, &#blog_form, &#support_form {
           label.label_positioning {
             background-color: $dark_blue_color;
           }
         }
 
         &#support_form {
-          label.label_positioning {
-            background-color: $light_blue_color;
-          }
-
           fieldset:nth-of-type(2) {
             margin-bottom: 3.125em;
           }
@@ -715,15 +780,15 @@ body {
   body {
     main {
       section {
-         form {
-           &#blog_form, &#contact_form, &#support_form {
-             fieldset {
-               input, textarea {
-                 padding: 1.14em;
-               }
-             }
-           }
-         }
+        form {
+          &#blog_form, &#contact_form, &#support_form {
+            fieldset {
+              input, textarea {
+                padding: 1.14em;
+              }
+            }
+          }
+        }
       }
     }
   }

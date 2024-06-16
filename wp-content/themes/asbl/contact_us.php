@@ -2,8 +2,8 @@
 /*
 Template Name: Contact us
 */
-get_header();
 
+get_header();
 ?>
 
 <main>

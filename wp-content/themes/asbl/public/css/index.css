@@ -12,6 +12,11 @@
   line-height: 1.7em;
 }
 
+#check_disponibility {
+  color: white;
+  text-decoration: underline;
+}
+
 #error {
   padding: 3.125em 1em;
   background: linear-gradient(to bottom, #3E38AD 65%, #27236F 35%);
@@ -112,6 +117,13 @@ img {
   object-fit: cover;
   width: 100%;
   border-radius: 3.75em 0;
+}
+
+h3 {
+  font-family: "Helvetica-Bold", "Arial-Bold", "Roboto-Bold", sans-serif;
+  font-size: 1.57em;
+  margin-bottom: 1em;
+  text-align: center;
 }
 
 .filter {
@@ -350,6 +362,48 @@ body header .main_nav input[type=checkbox]:checked ~ label[for=burger_menu] span
 body header .main_nav input[type=checkbox]:checked ~ label[for=burger_menu] span.line:after {
   transform: rotate(45deg);
 }
+body main section#map {
+  line-height: 1.43em;
+}
+body main section#map ul {
+  padding: 2.14em 1em 0 1em;
+}
+body main section#map ul li:not(:last-child) {
+  margin-bottom: 2.14em;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 2.14em;
+}
+body main section#map ul li > div {
+  display: flex;
+  gap: 2em;
+}
+body main section#map ul li > div h3 {
+  text-align: left;
+}
+body main section#map ul li > div img {
+  width: 50%;
+  height: auto;
+}
+body main section#financial div {
+  line-height: 1.43em;
+  padding: 0 1em;
+}
+body main section#financial div p:first-of-type {
+  margin-top: 2.14em;
+}
+body main section#financial div p:not(:last-child) {
+  margin-bottom: 1.14em;
+}
+body main section#financial div ul {
+  margin-bottom: 2.14em;
+}
+body main section#financial div ul li {
+  list-style: inside;
+  font-weight: bold;
+}
+body main section#financial div ul li:first-of-type {
+  margin-bottom: 1.14em;
+}
 body main section #validate, body main section #not_validate {
   border-radius: 3.75em 0;
   line-height: 1.43em;
@@ -392,9 +446,13 @@ body main section .shops_list_title {
 }
 body main section .shops_positioning {
   position: absolute;
-  left: calc(50% - 8.29em);
-  top: 3.43em;
+  left: calc(50% - 8.71em);
+  top: calc(50% - 12.5em);
   z-index: 1;
+  border: 1px solid #fff;
+  border-radius: 2.14em 0;
+  padding: 1.75em 1.14em;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 body main section .shops_positioning div:first-child {
   margin-bottom: 2.14em;
@@ -403,11 +461,8 @@ body main section form {
   padding: 0 1em;
   margin-top: 1.875em;
 }
-body main section form#contact_form label.label_positioning, body main section form#blog_form label.label_positioning {
+body main section form#contact_form label.label_positioning, body main section form#blog_form label.label_positioning, body main section form#support_form label.label_positioning {
   background-color: #27236F;
-}
-body main section form#support_form label.label_positioning {
-  background-color: #3E38AD;
 }
 body main section form#support_form fieldset:nth-of-type(2) {
   margin-bottom: 3.125em;
