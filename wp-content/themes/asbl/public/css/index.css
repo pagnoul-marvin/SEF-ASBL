@@ -465,6 +465,15 @@ body main section #validate, body main section #not_validate {
 }
 body main section .houses, body main section .shops {
   margin: 1.875em 1em 0 1em;
+  position: relative;
+}
+body main section .houses_positioning, body main section .shops_positioning {
+  position: absolute;
+  z-index: 1;
+  border: 1px solid #fff;
+  border-radius: 2.14em 0;
+  padding: 1.75em 1.14em;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 body main section .houses:not(:last-child), body main section .shops:not(:last-child) {
   border-bottom: 1px solid #fff;
@@ -479,6 +488,19 @@ body main section .houses_list_element, body main section .shops_list_element {
 body main section .houses_list_element:not(:last-child), body main section .shops_list_element:not(:last-child) {
   margin-bottom: 1.14em;
 }
+body main section .houses {
+  text-align: center;
+}
+body main section .houses_positioning {
+  left: calc(50% - 8.6em);
+  top: calc(50% - 8em);
+  text-align: left;
+  max-width: 17.1em;
+}
+body main section .houses img {
+  width: 50%;
+  height: auto;
+}
 body main section .shops {
   position: relative;
 }
@@ -492,14 +514,8 @@ body main section .shops_list_title {
   margin-bottom: 1.43em;
 }
 body main section .shops_positioning {
-  position: absolute;
   left: calc(50% - 8.71em);
   top: calc(50% - 12.5em);
-  z-index: 1;
-  border: 1px solid #fff;
-  border-radius: 2.14em 0;
-  padding: 1.75em 1.14em;
-  background-color: rgba(0, 0, 0, 0.6);
 }
 body main section .shops_positioning div:first-child {
   margin-bottom: 2.14em;

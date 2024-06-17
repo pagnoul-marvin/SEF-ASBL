@@ -72,12 +72,15 @@
 
     <?php } else { ?>
 
-        <ul class="<?= $article_class ?>_list">
+        <div class="<?= $article_class ?>_positioning">
 
-            <li class="<?= $article_class ?>_list_element text"><?= get_field($field_name . '_' . $second_field_name . '_first_list_element') ?></li>
-            <li class="<?= $article_class ?>_list_element text"><?= get_field($field_name . '_' . $second_field_name . '_second_list_element') ?></li>
+            <ul class="<?= $article_class ?>_list">
 
-        </ul>
+                <li class="<?= $article_class ?>_list_element text"><?= get_field($field_name . '_' . $second_field_name . '_first_list_element') ?></li>
+                <li class="<?= $article_class ?>_list_element text"><?= get_field($field_name . '_' . $second_field_name . '_second_list_element') ?></li>
+
+            </ul>
+        </div>
 
     <?php } ?>
 
@@ -131,13 +134,16 @@
 
     <?php } else { ?>
 
-        <ul class="<?= $article_class ?>_list">
+        <div class="<?= $article_class ?>_positioning">
 
-            <li class="<?= $article_class ?>_list_element text"><?= get_field($field_name . '_' . $third_field_name . '_first_list_element') ?></li>
-            <li class="<?= $article_class ?>_list_element text"><?= get_field($field_name . '_' . $third_field_name . '_second_list_element') ?></li>
-            <li class="<?= $article_class ?>_list_element text"><?= get_field($field_name . '_' . $third_field_name . '_third_list_element') ?></li>
+            <ul class="<?= $article_class ?>_list">
 
-        </ul>
+                <li class="<?= $article_class ?>_list_element text"><?= get_field($field_name . '_' . $third_field_name . '_first_list_element') ?></li>
+                <li class="<?= $article_class ?>_list_element text"><?= get_field($field_name . '_' . $third_field_name . '_second_list_element') ?></li>
+                <li class="<?= $article_class ?>_list_element text"><?= get_field($field_name . '_' . $third_field_name . '_third_list_element') ?></li>
+
+            </ul>
+        </div>
 
     <?php } ?>
 

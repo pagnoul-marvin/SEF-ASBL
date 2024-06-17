@@ -530,6 +530,16 @@ body {
 
       .houses, .shops {
         margin: 1.875em 1em 0 1em;
+        position: relative;
+
+        &_positioning {
+          position: absolute;
+          z-index: 1;
+          border: 1px solid $white_color;
+          border-radius: 2.14em 0;
+          padding: 1.75em 1.14em;
+          background-color: rgba(0, 0, 0, 0.6);
+        }
 
         &:not(:last-child) {
           border-bottom: 1px solid $white_color;
@@ -551,6 +561,22 @@ body {
         }
       }
 
+      .houses {
+        text-align: center;
+
+        &_positioning {
+          left: calc(100% / 2 - 8.6em);
+          top: calc(100% / 2 - 8em);
+          text-align: left;
+          max-width: 17.1em;
+        }
+
+        img {
+          width: 50%;
+          height: auto;
+        }
+      }
+
       .shops {
 
         position: relative;
@@ -567,14 +593,8 @@ body {
         }
 
         &_positioning {
-          position: absolute;
           left: calc(50% - 8.71em);
           top: calc(50% - 12.5em);
-          z-index: 1;
-          border: 1px solid $white_color;
-          border-radius: 2.14em 0;
-          padding: 1.75em 1.14em;
-          background-color: rgba(0, 0, 0, 0.6);
 
           div:first-child {
             margin-bottom: 2.14em;
