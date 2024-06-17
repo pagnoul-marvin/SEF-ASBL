@@ -9,7 +9,7 @@ get_header()
 
     <p id="last_modification"><?= get_field('legal_notice_last_modificated_date') ?></p>
 
-    <section class="ln_even_unlinked_section spacing">
+    <section class="ln_even_unlinked_section spacing" itemscope itemtype="https://schema.org/Organization">
 
         <?php component('unlinked_section.legal_notice_section', [
                 'field_name' => 'legal_notice_owner',

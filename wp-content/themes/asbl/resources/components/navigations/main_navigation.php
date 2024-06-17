@@ -35,10 +35,25 @@
                 <?php endforeach;
             } else {
                 foreach (dw_get_navigation_links($location) as $link): ?>
-                    <li class="<?= $location ?>_nav_item">
-                        <a class="link_hover" href="<?= $link->url ?>"
-                           title="Aller vers la page <?= $link->label ?>"><?= $link->label ?></a>
-                    </li>
+                    <?php if ($location === 'partners'): ?>
+                        <li class="<?= $location ?>_nav_item" itemscope itemtype="https://schema.org/Organization">
+                            <a itemprop="url" class="link_hover" href="<?= $link->url ?>"
+                               title="Aller vers la page <?= $link->label ?>"><span
+                                        itemprop="name"><?= $link->label ?></span></a>
+                        </li>
+                    <?php elseif ($location === 'socials'): ?>
+                        <li class="<?= $location ?>_nav_item" itemscope itemtype="https://schema.org/Organization">
+                            <a itemprop="sameAs" class="link_hover" href="<?= $link->url ?>"
+                               title="Aller vers la page <?= $link->label ?>"><?= $link->label ?></a>
+                        </li>
+
+                    <?php else: ?>
+                        <li class="<?= $location ?>_nav_item">
+                            <a class="link_hover" href="<?= $link->url ?>"
+                               title="Aller vers la page <?= $link->label ?>"><?= $link->label ?></a>
+                        </li>
+
+                    <?php endif; ?>
                 <?php endforeach;
             } ?>
 

@@ -27,11 +27,11 @@
 
     </div>
 
-    <section id="legal_notices" class="flex_container">
+    <section id="legal_notices" class="flex_container" itemscope itemtype="https://schema.org/Person">
         <h2 class="hidden">Mentions l&eacute;gales</h2>
         <p>&copy; 2024 ASBL SEF. Tous droits r&eacute;serv&eacute;s.</p>
         <p>Cr&eacute;&eacute; par <a class="link_hover" title="Aller vers le site du portfolio de Marvin Pagnoul"
-                                     hreflang="fr" href="https://portfolio.marvinpagnoul.be">Marvin Pagnoul</a></p>
+                                     hreflang="fr" href="https://portfolio.marvinpagnoul.be"><span itemprop="name">Marvin Pagnoul</span></a></p>
         <a class="link_hover" href="http://site_sef.test/mentions-legales" hreflang="fr"
            title="Aller vers la page des mentions légales">Mentions l&eacute;gales</a>
     </section>

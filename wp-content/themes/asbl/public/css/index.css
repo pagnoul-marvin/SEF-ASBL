@@ -19,6 +19,7 @@
 
 #error {
   padding: 3.125em 1em;
+  background: -o-linear-gradient(top, #3E38AD 65%, #27236F 35%);
   background: linear-gradient(to bottom, #3E38AD 65%, #27236F 35%);
 }
 #error h2 {
@@ -76,15 +77,22 @@
 }
 
 .translated {
+  -webkit-transform: translateX(10000px);
+  -ms-transform: translateX(10000px);
   transform: translateX(10000px);
 }
 
 .link_hover, .section_link_hover {
   color: #fff;
+  -webkit-text-decoration: underline transparent;
   text-decoration: underline transparent;
-  transition: text-decoration 0.5s ease-in-out;
+  -webkit-transition: -webkit-text-decoration 0.5s ease-in-out;
+  transition: -webkit-text-decoration 0.5s ease-in-out;
+  -o-transition: text-decoration 0.5s ease-in-out;
+  transition: text-decoration 0.5s ease-in-out, -webkit-text-decoration 0.5s ease-in-out;
 }
 .link_hover:hover, .section_link_hover:hover {
+  -webkit-text-decoration: underline #fff;
   text-decoration: underline #fff;
 }
 
@@ -108,12 +116,20 @@
 }
 
 .flex_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
 img {
+  -o-object-fit: cover;
   object-fit: cover;
   width: 100%;
   border-radius: 3.75em 0;
@@ -127,12 +143,14 @@ h3 {
 }
 
 .filter {
+  -webkit-filter: brightness(0.4);
   filter: brightness(0.4);
   height: 29.9375em;
   border-radius: 0;
 }
 
 .black_and_white {
+  -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 }
 
@@ -150,6 +168,7 @@ h3 {
   overflow: hidden;
   position: relative;
   padding-bottom: 3.125em;
+  -webkit-box-shadow: 0 6px 9px rgba(0, 0, 0, 0.5);
   box-shadow: 0 6px 9px rgba(0, 0, 0, 0.5);
 }
 
@@ -197,6 +216,7 @@ h3 {
 }
 
 .even {
+  background: -o-linear-gradient(top, #27236F 85%, #3E38AD 15%);
   background: linear-gradient(to bottom, #27236F 85%, #3E38AD 15%);
 }
 .even_unlinked_section, .even_faq {
@@ -210,6 +230,7 @@ h3 {
 }
 
 .odd {
+  background: -o-linear-gradient(top, #3E38AD 85%, #27236F 15%);
   background: linear-gradient(to bottom, #3E38AD 85%, #27236F 15%);
 }
 .odd_unlinked_section, .odd_faq {
@@ -274,7 +295,12 @@ body header {
   z-index: 2;
 }
 body header .main_nav {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 body header .main_nav_logo {
@@ -302,6 +328,8 @@ body header .main_nav label[for=burger_menu] span.line {
   top: calc(50% - 0.2em);
   background-color: #fff;
   border-radius: 0.3em;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 body header .main_nav label[for=burger_menu] span.line:before, body header .main_nav label[for=burger_menu] span.line:after {
@@ -311,22 +339,32 @@ body header .main_nav label[for=burger_menu] span.line:before, body header .main
   background-color: #fff;
   position: absolute;
   border-radius: 0.3em;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 body header .main_nav label[for=burger_menu] span.line:before {
+  -webkit-transform: translateY(-1em);
+  -ms-transform: translateY(-1em);
   transform: translateY(-1em);
 }
 body header .main_nav label[for=burger_menu] span.line:after {
+  -webkit-transform: translateY(1em);
+  -ms-transform: translateY(1em);
   transform: translateY(1em);
 }
 body header .main_nav div {
   position: absolute;
   top: -1000px;
+  -webkit-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
   visibility: hidden;
   background-color: #fff;
   overflow: scroll;
   height: 100vh;
+  -webkit-transform: translateX(-1em);
+  -ms-transform: translateX(-1em);
   transform: translateX(-1em);
   width: 100vw;
   display: inline-block;
@@ -357,9 +395,13 @@ body header .main_nav input[type=checkbox]:checked ~ label[for=burger_menu] span
   background-color: transparent;
 }
 body header .main_nav input[type=checkbox]:checked ~ label[for=burger_menu] span.line:before {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 body header .main_nav input[type=checkbox]:checked ~ label[for=burger_menu] span.line:after {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 body main section#map {
@@ -374,6 +416,8 @@ body main section#map ul li:not(:last-child) {
   padding-bottom: 2.14em;
 }
 body main section#map ul li > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 2em;
 }
@@ -414,7 +458,10 @@ body main section #validate, body main section #not_validate {
   right: 0;
   width: calc(100% - 2.28em);
   z-index: 1;
-  transition: transform 1s ease-in-out;
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  transition: -webkit-transform 1s ease-in-out;
+  -o-transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
 }
 body main section .houses, body main section .shops {
   margin: 1.875em 1em 0 1em;
@@ -497,6 +544,18 @@ body main section form#contact_form fieldset input, body main section form#conta
   color: #fff;
   line-height: 1.42em;
 }
+body main section form#contact_form fieldset input::-webkit-input-placeholder, body main section form#contact_form fieldset textarea::-webkit-input-placeholder, body main section form#support_form fieldset input::-webkit-input-placeholder, body main section form#support_form fieldset textarea::-webkit-input-placeholder, body main section form#blog_form fieldset input::-webkit-input-placeholder, body main section form#blog_form fieldset textarea::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+body main section form#contact_form fieldset input::-moz-placeholder, body main section form#contact_form fieldset textarea::-moz-placeholder, body main section form#support_form fieldset input::-moz-placeholder, body main section form#support_form fieldset textarea::-moz-placeholder, body main section form#blog_form fieldset input::-moz-placeholder, body main section form#blog_form fieldset textarea::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+body main section form#contact_form fieldset input:-ms-input-placeholder, body main section form#contact_form fieldset textarea:-ms-input-placeholder, body main section form#support_form fieldset input:-ms-input-placeholder, body main section form#support_form fieldset textarea:-ms-input-placeholder, body main section form#blog_form fieldset input:-ms-input-placeholder, body main section form#blog_form fieldset textarea:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+body main section form#contact_form fieldset input::-ms-input-placeholder, body main section form#contact_form fieldset textarea::-ms-input-placeholder, body main section form#support_form fieldset input::-ms-input-placeholder, body main section form#support_form fieldset textarea::-ms-input-placeholder, body main section form#blog_form fieldset input::-ms-input-placeholder, body main section form#blog_form fieldset textarea::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
 body main section form#contact_form fieldset input::placeholder, body main section form#contact_form fieldset textarea::placeholder, body main section form#support_form fieldset input::placeholder, body main section form#support_form fieldset textarea::placeholder, body main section form#blog_form fieldset input::placeholder, body main section form#blog_form fieldset textarea::placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
@@ -537,6 +596,8 @@ body main section#slider #slideshow_content {
   margin: 0;
   padding: 0;
   width: 500%;
+  -webkit-transition: left 1s;
+  -o-transition: left 1s;
   transition: left 1s;
 }
 body main section#slider #slideshow_content li {
@@ -548,6 +609,9 @@ body main section#slider #slideshow_content li img {
   height: 100%;
 }
 body main section#slider .flex_container {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
   margin-top: 2.14em;
   padding: 0 calc(50% - 20em);
@@ -556,6 +620,8 @@ body main section#slider .flex_container {
 body main section#slider .flex_container button {
   border-radius: 0.714em;
   background-color: transparent;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   border: 1px solid #fff;
   padding: 1.14em;
@@ -657,6 +723,8 @@ body footer section#legal_notices a {
     width: calc(100% - 10em);
   }
   body header .main_nav div {
+    -webkit-transform: translateX(-5em);
+    -ms-transform: translateX(-5em);
     transform: translateX(-5em);
   }
   body header .main_nav div ul.flex_container {
@@ -693,9 +761,11 @@ body footer section#legal_notices a {
     right: 8.8em;
   }
   body main .even {
+    background: -o-linear-gradient(top, #27236F 89%, #3E38AD 11%);
     background: linear-gradient(to bottom, #27236F 89%, #3E38AD 11%);
   }
   body main .odd {
+    background: -o-linear-gradient(top, #3E38AD 89%, #27236F 11%);
     background: linear-gradient(to bottom, #3E38AD 89%, #27236F 11%);
   }
   body main .filter {
@@ -708,6 +778,9 @@ body footer section#legal_notices a {
     margin-top: 3em;
   }
   body footer div.flex_container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
   }
   body footer div.flex_container nav.footer_nav, body footer div.flex_container nav.contact_nav, body footer div.flex_container nav.socials_nav, body footer div.flex_container nav.partners_nav {
@@ -723,6 +796,8 @@ body footer section#legal_notices a {
     width: calc(100% - 20em);
   }
   body header .main_nav div {
+    -webkit-transform: translateX(-10em);
+    -ms-transform: translateX(-10em);
     transform: translateX(-10em);
   }
   body main {
@@ -740,6 +815,7 @@ body footer section#legal_notices a {
     display: none;
   }
   body header .main_nav div {
+    -webkit-transform: unset;
     transform: unset;
     position: initial;
     top: unset;
@@ -751,6 +827,9 @@ body footer section#legal_notices a {
   }
   body header .main_nav div ul.flex_container {
     padding: unset;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
     gap: 3.125em;
   }

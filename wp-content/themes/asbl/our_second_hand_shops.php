@@ -7,7 +7,7 @@ get_header()
 
     <main>
 
-        <section class="odd_unlinked_section spacing">
+        <section class="odd_unlinked_section spacing" itemscope itemtype="https://schema.org/Organization">
 
             <?php component('list_section.section', [
 

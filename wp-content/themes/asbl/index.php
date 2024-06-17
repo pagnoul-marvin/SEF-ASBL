@@ -15,10 +15,7 @@ try {
 } catch (PDOException $e) {
     Response::redirect();
 }
-?>
-
-?>
-<?php get_header(); ?>
+ get_header(); ?>
 
 <main>
 
