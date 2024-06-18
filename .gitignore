@@ -27,6 +27,7 @@ wp-content/themes/*
 !wp-content/themes/asbl
 !wp-content/themes/asbl/*
 wp-content/themes/asbl/.env.local.ini
+wp-content/themes/asbl/tables_sql.php
 !wp-content/themes/asbl/helpers/*
 !wp-content/themes/asbl/core/*
 !wp-content/themes/asbl/core/exceptions/*
