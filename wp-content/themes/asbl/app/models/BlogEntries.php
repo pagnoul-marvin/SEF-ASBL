@@ -23,6 +23,7 @@ class BlogEntries extends Database
     {
         $sql = <<<SQL
             SELECT * from $this->table
+            WHERE deleted_at IS NULL
             ORDER BY created_at DESC;
         SQL;
 
